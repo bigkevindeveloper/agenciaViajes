@@ -1,8 +1,15 @@
 
+/*Ejecutados por jquery*/
+.full-page{
+
+}
 /*FUENTE DE COLORES*/
 .f-blanco{color: white}
 .f-negro{color: black}
+.f-amarillo{color:  #e0a800}
 .bg-yellow{background-color: #e0a800}
+.f-blue{color:#202557} /*Color azul general de toda la pagina*/
+.bg-blue{background-color: #202557}
 /*======FIN======*/
 /*FUENTE WEIGHT*/
 .bold{
@@ -23,6 +30,8 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+/*=========================KEVIN RIVERA=================================*/
 .main{
 	background: url("../md/header.jpg");
 	background-size: 100% 100%;
@@ -56,10 +65,7 @@ header{
 	font-size: 1.9vw;
 	color: black;
 }
-/*Ejecutados por jquery*/
-.full-page{
 
-}
 
 /*Seccion de viajes*/
 .contenedor-viaje{
@@ -82,4 +88,19 @@ header{
 .vp {
 	padding-top: 2vh;
 }
-
+/*Quienes somos*/
+.quiensomos{
+	background: url(../md/quienessomos.png);
+	background-size: 100% 100%;
+}
+.contenido-qs{
+	min-height: 50vh;
+	padding: 10vh;
+}
+.content-qs{
+	background-color: white;
+	padding: 10vh;
+	min-height: 50vh;
+	min-width: 50%;
+}
+/*=========================FIN KEVIN RIVERA=================================*/
