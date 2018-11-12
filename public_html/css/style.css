@@ -103,4 +103,8 @@ header{
 	min-height: 50vh;
 	min-width: 50%;
 }
+.hr-warning{
+	background-color: #e0a800;
+	height: 0.3vh;
+}
 /*=========================FIN KEVIN RIVERA=================================*/
