@@ -83,3 +83,62 @@ header{
 	padding-top: 2vh;
 }
 
+
+/*=========================PABLO ADRIAENSENS=================================*/
+
+
+/* PROVISIONAL */
+
+.separador {
+	padding: 0;
+	width: 25px;
+}
+
+.hr-warning{
+	background-color: #689AFE;
+	height: 0.2vh;
+    margin: 0 0 40px 0;
+}
+
+/*Sección Mapa*/
+.contenedor-mapa {
+	min-height: 70vh;
+}
+
+.my-map {
+	width: 90%;
+	height: 95%;
+}
+
+/*Sección Formulario*/
+.contenedor-formulario {
+	min-height: 70vh;
+}
+
+.my-formulario {
+	width: 80%;
+	height: 80%;
+}
+
+.form-left {
+	padding: 0 10px 0 0;
+}
+
+.form-right {
+	padding: 0 0 0 10px;
+}
+
+.form-group-message {
+	margin: 0.2em;
+}
+
+.form-condition {
+	padding: 0;
+	font-size: 0.8em;
+}
+
+.btnform{
+	margin-top: 3vh;
+	font-size: 1.9vw;
+	color: black;
+}
