@@ -24,6 +24,10 @@
     color: #202557
 }
 
+.font-title{
+    font-family: 'Luckiest Guy', cursive;
+}
+
 /*Color azul general de toda la pagina*/
 .bg-blue {
     background-color: #202557
@@ -81,7 +85,7 @@ header {
     z-index: 1;
 }
 .menu-fixed{
-    transition: 2s;
+    transition: 0.5s;
     background-color: rgba(0, 0, 0, 0.9);
    
 }
@@ -171,6 +175,22 @@ header {
     height: 0.3vh;
 }
 
+.title-hover{
+    transition: 2s ease;
+    opacity: 0;
+    width: 72%;
+    height: 64%;
+    position: absolute;
+    margin:0;
+}
+.title-hover:hover{
+    transition: 2s ease;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.content-title{
+    padding: 0;
+}
 /*=========================FIN KEVIN RIVERA=================================*/
 
 /*=========================PABLO ADRIAENSENS=================================*/

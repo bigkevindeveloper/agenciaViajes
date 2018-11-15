@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Agencia de viajes</title>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,11 +14,11 @@
             <!-- El header contendra: El logo, el menu, y el menu social -->
             <div class="col-md-3 d-flex justify-content-left">
                 <div class="row logo-container">
-                    <div class="col-md-12 cont-logo">
+                    <div class="col-md-12 ">
                         <img id="logo" src="md/iconoweb.png" class="iconoweb img-responsive" alt="">
                     </div>
-                    <div class="col-md-7 cont-titulo">
-                        <h4 class="titulo text-center f-negro">GeeksHubs<br>Travel</h4>
+                    <div  class="col-md-7 cont-titulo">
+                        <h4  class="titulo text-center f-negro">GeeksHubs<br>Travel</h4>
                     </div>
                 </div>
             </div>
@@ -25,9 +26,10 @@
                 <!-- Menu -->
                 <div class="my-auto">
                     <nav class="menu-navegacion">
-                        <a href="#"><i>Destinos</i></a>
-                        <a href="#"><i>Quién somos</i></a>
-                        <a href="#"><i>Donde estamos</i></a>
+                        <a id="btn-home" href="#">Inicio</a>
+                        <a id="btn-destinos" href="#"><i>Destinos</i></a>
+                        <a id="btn-quien" href="#"><i>Quién somos</i></a>
+                        <a id="btn-donde" href="#"><i>Donde estamos</i></a>
                     </nav>
                 </div>
 
@@ -46,7 +48,7 @@
                 </div>
             </div>
     </header>
-    <section class="main full-page">
+    <section id="sec-inicio" class="main full-page">
         <!-- Esta seccion del container contendra el header(menu)-> Con el logo, el menu y la seccion de social -->
         <div class="row header2 ">
             <div class="col-md-4"></div>
@@ -68,7 +70,7 @@
         </div>
     </section>
 
-    <section class="viajes full-page">
+    <section id="sec-destinos" class="viajes full-page">
         <div class="container">
         <div class="row">
             <!-- En esta seccion se autogeneran los distintos viajes
@@ -78,6 +80,11 @@
             <!-- **********Seccion de un viaje INICIO*********** -->
             <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
                 <div class="item-viaje my-auto">
+                    <div class="title-hover row">
+                        <div class="col-12 d-flex justify-content-center content-title">
+                            <h3 class="my-auto font-title f-blanco">DESTINO</h3>
+                        </div>
+                    </div>
                     <img src="md/madrid.jpg" class="img-responsive" alt="">
                     <div class="row viaje-descripcion">
                         <div class="col-md-8 my-auto vd">
@@ -95,6 +102,11 @@
             <!-- **********Seccion de un viaje INICIO*********** -->
             <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
                 <div class="item-viaje my-auto">
+                    <div class="title-hover row">
+                        <div class="col-12 d-flex justify-content-center content-title">
+                            <h3 class="my-auto font-title f-blanco">DESTINO</h3>
+                        </div>
+                    </div>
                     <img src="md/beijing.jpg" class="img-responsive" alt="">
                     <div class="row viaje-descripcion">
                         <div class="col-md-8 my-auto vd">
@@ -112,6 +124,11 @@
             <!-- **********Seccion de un viaje INICIO*********** -->
             <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
                 <div class="item-viaje my-auto">
+                    <div class="title-hover row">
+                        <div class="col-12 d-flex justify-content-center content-title">
+                            <h3 class="my-auto font-title f-blanco">DESTINO</h3>
+                        </div>
+                    </div>
                     <img src="md/ciudad_mexico.jpg" class="img-responsive" alt="">
                     <div class="row viaje-descripcion">
                         <div class="col-md-8 my-auto vd">
@@ -128,6 +145,11 @@
             <!-- *************************FIN*********************** -->
             <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
                 <div class="item-viaje my-auto">
+                    <div class="title-hover row">
+                        <div class="col-12 d-flex justify-content-center content-title">
+                            <h3 class="my-auto font-title f-blanco">DESTINO</h3>
+                        </div>
+                    </div>
                     <img src="md/new_york.jpg" class="img-responsive" alt="">
                     <div class="row viaje-descripcion">
                         <div class="col-md-8 my-auto vd">
@@ -145,6 +167,11 @@
             <!-- **********Seccion de un viaje INICIO*********** -->
             <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
                 <div class="item-viaje my-auto">
+                    <div class="title-hover row">
+                        <div class="col-12 d-flex justify-content-center content-title">
+                            <h3 class="my-auto font-title f-blanco">DESTINO</h3>
+                        </div>
+                    </div>
                     <img src="md/tokyo.jpg" class="img-responsive" alt="">
                     <div class="row viaje-descripcion">
                         <div class="col-md-8 my-auto vd">
@@ -162,6 +189,11 @@
             <!-- **********Seccion de un viaje INICIO*********** -->
             <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
                 <div class="item-viaje my-auto">
+                    <div class="title-hover row">
+                        <div class="col-12 d-flex justify-content-center content-title">
+                            <h3 class="my-auto font-title f-blanco">DESTINO</h3>
+                        </div>
+                    </div>
                     <img src="md/buenos_aires.jpg" class="img-responsive" alt="">
                     <div class="row viaje-descripcion">
                         <div class="col-md-8 my-auto vd">
@@ -183,7 +215,7 @@
 
 
     </section>
-    <section class="full-page quiensomos">
+    <section id="sec-quienessomos" class="full-page quiensomos">
         <div class="container">
         <div class="row full-page">
             <div class="col-md-7 my-auto contenido-qs d-flex justify-content-center">
@@ -215,7 +247,7 @@
     </section>
 
 
-    <section class="contact full-page">
+    <section id="sec-contacto" class="contact full-page">
         <div class="row contact-row my-auto">
             <!-- En esta seccion dispondremos del mapa con la ubicación de la empresa, información de su horario
             y el formulario a rellenar para contarctar con dicha empresa -->
