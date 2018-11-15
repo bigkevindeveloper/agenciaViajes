@@ -78,11 +78,15 @@ body {
 
 header {
     transition: 2s;
-    padding-left: 4vh;
-    padding-right: 4vh;
+
     height: 17vh;
     position: fixed;
     z-index: 1;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px; !important
+    margin-left: 0px;
 }
 .menu-fixed{
     transition: 0.5s;
@@ -161,6 +165,7 @@ header {
 .contenido-qs {
     min-height: 50vh;
     padding: 10vh;
+    padding-left: 0vh;
 }
 
 .content-qs {
@@ -214,6 +219,7 @@ header {
 /*div Mapa*/
 .contenedor-mapa {
     min-height: 70vh;
+    padding-left: 9vh;
 }
 
 .my-map {
