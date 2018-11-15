@@ -65,6 +65,7 @@
 .main {
     background: url("../md/header.jpg");
     background-size: 100% 100%;
+    padding-top: 30vh;
 }
 
 body {
@@ -72,17 +73,35 @@ body {
 }
 
 header {
+    transition: 2s;
     padding-left: 4vh;
     padding-right: 4vh;
+    height: 17vh;
+    position: fixed;
+    z-index: 1;
+}
+.menu-fixed{
+    transition: 2s;
+    background-color: rgba(0, 0, 0, 0.9);
+   
+}
+.cont-logo{
+    padding-left: 25px;
+}
+.cont-titulo{
+    padding-left: 0;
+}
+.titulo{
+    font-size: 1.2rem;
 }
 
 .logo-container {
-    padding-top: 3vh;
+    padding-top: 1.3vh;
 }
 
 .iconoweb {
-    width: 55%;
-    height: 8vh;
+    width: 45%;
+    height: 6vh;
 }
 
 .header2 {

@@ -11,4 +11,4 @@ app.use(express.static(__dirname + '/public_html'));
 app.get('/', (req,res)  => {
 	res.sendFile(`${__dirname}/public_html/index.html`);
 });
-app.listen(3000, () => console.log('EstadO del servidor: OK '));
+app.listen(3000, () => console.log('Estado del servidor: OK '));

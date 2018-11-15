@@ -9,16 +9,14 @@
 </head>
 <body>
 <div class="container-fluid">
-    <section class="main full-page">
-        <!-- Esta seccion del container contendra el header(menu)-> Con el logo, el menu y la seccion de social -->
-        <header class="row">
+     <header id="menu-navegacion" class="row">
             <!-- El header contendra: El logo, el menu, y el menu social -->
             <div class="col-md-3 d-flex justify-content-left">
                 <div class="row logo-container">
-                    <div class="col-md-12">
-                        <img src="md/iconoweb.png" class="iconoweb img-responsive" alt="">
+                    <div class="col-md-12 cont-logo">
+                        <img id="logo" src="md/iconoweb.png" class="iconoweb img-responsive" alt="">
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 cont-titulo">
                         <h4 class="titulo text-center f-negro">GeeksHubs<br>Travel</h4>
                     </div>
                 </div>
@@ -47,7 +45,9 @@
                     </nav>
                 </div>
             </div>
-        </header>
+    </header>
+    <section class="main full-page">
+        <!-- Esta seccion del container contendra el header(menu)-> Con el logo, el menu y la seccion de social -->
         <div class="row header2 ">
             <div class="col-md-4"></div>
             <div class="col-md-6">
@@ -69,13 +69,14 @@
     </section>
 
     <section class="viajes full-page">
+        <div class="container">
         <div class="row">
             <!-- En esta seccion se autogeneran los distintos viajes
             cada columna correspondera a un viaje distinto, este por dentro contendra un div, que estara centrado tanto horizontal como verticalmente. -->
 
 
             <!-- **********Seccion de un viaje INICIO*********** -->
-            <div class="col-md-4 contenedor-viaje d-flex justify-content-end">
+            <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
                 <div class="item-viaje my-auto">
                     <img src="md/madrid.jpg" class="img-responsive" alt="">
                     <div class="row viaje-descripcion">
@@ -109,7 +110,7 @@
             </div>
             <!-- *************************FIN*********************** -->
             <!-- **********Seccion de un viaje INICIO*********** -->
-            <div class="col-md-4 contenedor-viaje d-flex justify-content-left">
+            <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
                 <div class="item-viaje my-auto">
                     <img src="md/ciudad_mexico.jpg" class="img-responsive" alt="">
                     <div class="row viaje-descripcion">
@@ -125,7 +126,7 @@
                 </div>
             </div>
             <!-- *************************FIN*********************** -->
-            <div class="col-md-4 contenedor-viaje d-flex justify-content-end">
+            <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
                 <div class="item-viaje my-auto">
                     <img src="md/new_york.jpg" class="img-responsive" alt="">
                     <div class="row viaje-descripcion">
@@ -159,7 +160,7 @@
             </div>
             <!-- *************************FIN*********************** -->
             <!-- **********Seccion de un viaje INICIO*********** -->
-            <div class="col-md-4 contenedor-viaje d-flex justify-content-left">
+            <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
                 <div class="item-viaje my-auto">
                     <img src="md/buenos_aires.jpg" class="img-responsive" alt="">
                     <div class="row viaje-descripcion">
@@ -175,13 +176,15 @@
                 </div>
             </div>
             <!-- *************************FIN*********************** -->
-
+        
         </div>
+    </div>
     </section>
 
 
     </section>
     <section class="full-page quiensomos">
+        <div class="container">
         <div class="row full-page">
             <div class="col-md-7 my-auto contenido-qs d-flex justify-content-center">
                 <div class="content-qs">
@@ -207,6 +210,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
