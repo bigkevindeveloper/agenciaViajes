@@ -26,7 +26,7 @@ $(document).ready(function(){
 $('#btn-destinos').click(function(){
 	$('html, body').animate({
         // #elemento2 · Será el elemento donde queremos desplazarnos.
-    	scrollTop: $("#sec-destinos").offset().top
+    	scrollTop: $("#sec-destinos").offset().top-90
         //1500 · La velocidad que le queremos dar
 	 	}, 1800);
 })
@@ -34,14 +34,14 @@ $('#btn-destinos').click(function(){
 $('#btn-quien').click(function(){
 	$('html, body').animate({
         // #elemento2 · Será el elemento donde queremos desplazarnos.
-    	scrollTop: $("#sec-quienessomos").offset().top
+    	scrollTop: $("#sec-quienessomos").offset().top-90
         //1500 · La velocidad que le queremos dar
 	 	}, 1800);
 })
 $('#btn-donde').click(function(){
 	$('html, body').animate({
         // #elemento2 · Será el elemento donde queremos desplazarnos.
-    	scrollTop: $("#sec-contacto").offset().top
+    	scrollTop: $("#sec-contacto").offset().top-90
         //1500 · La velocidad que le queremos dar
 	 	}, 1800);
 })
