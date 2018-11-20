@@ -159,6 +159,17 @@ header {
 .vp {
     padding-top: 2vh;
 }
+/*Responsive*/
+.pad0{padding:0}
+/*imagenes responsivas*/
+.m-carousel{
+    padding-top:10vh;
+}
+.mv-title{padding-right:0;padding-left:0}
+.m-img-viaje{height:60vh;padding:0}
+.mv-txt{padding-right:0;}
+.mv-des {background-color: #202557;}
+.mv-price {background-color: #e0a800;}
 
 /*Quienes somos*/
 .quiensomos {
