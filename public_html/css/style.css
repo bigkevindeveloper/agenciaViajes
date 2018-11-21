@@ -204,9 +204,29 @@ header {
 .mv-price {background-color: #e0a800;}
 
 /*Quienes somos*/
+
+.quiensomos {
+    background-color: #b1d3df;
+    font-size: 1vh;
+}
+
+h2 {
+    font-size: 2vh;
+    font-weight: bold;
+}
+@media (min-width: 480px) {
+    h2{
+        font-size: 5vh;
+    }
 .quiensomos {
     background: url(../md/quienessomos.png);
     background-size: 100% 100%;
+    font-size: 3vh;
+}
+}
+
+.footer {
+    background-color: #141939;
 }
 
 .contenido-qs {
@@ -215,12 +235,20 @@ header {
     padding-left: 0vh;
 }
 
+@media (min-width: 480px) {
+    .content-qs {
+        background-color: white;
+        padding: 10vh;
+        min-height: 50vh;
+        min-width: 50%;
+}
+    }
+
 .content-qs {
     background-color: white;
-    padding: 10vh;
-    min-height: 50vh;
+    padding: 3vh;
+    min-height: 3vh;
     min-width: 50%;
-}
 
 .hr-warning {
     background-color: #e0a800;
@@ -245,6 +273,9 @@ header {
 .content-title {
     padding: 0;
 }
+
+
+
 
 /*=========================FIN KEVIN RIVERA=================================*/
 
@@ -311,6 +342,13 @@ header {
 }
 
 /*Sección Footer*/
+
+
+
+#sec-footer {
+    background-color: #141939;
+}
+
 #sec-footer {
     background-color: #141939;
 }
