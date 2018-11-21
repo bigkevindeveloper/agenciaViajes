@@ -9,6 +9,9 @@ $(document).ready(function(){
     if ($(window).scrollTop() > 100) {
         configurarMenu();
     }
+    if ($(window).width() < 400) {
+        quienesSomos();
+    }
 	$(window).on('scroll', function(){
 		if ( $(window).scrollTop() > 150 ){
 			$('#menu-navegacion').addClass('menu-fixed');
@@ -49,15 +52,19 @@ $(document).ready(function(){
             estadoMenu = true;
             /*Vamos a aplicarle la propiedad visible a nuestro menu desplegable*/
             $('#menu_desplegado').attr('class', 'd-block menu-desplegado col-7');
-            console.log(estadoMenu);
+            //console.log(estadoMenu);
         } else {
             /*Lo que se ejecutara si no es visible*/
             $('#menu_desplegado').attr('class', 'd-none menu-desplegado col-7');
             estadoMenu = false;
-            console.log(estadoMenu);
+            //console.log(estadoMenu);
         }
     })
 });
+/*Modificar quienes somos*/
+function quienesSomos() {
+    $('#qss').attr('class','sec-quienessomosmovil');
+}
 /*Funciones de navegacion*/
 function ocultarMenu() {
     $("#burguer")[0].click();

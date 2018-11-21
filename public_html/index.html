@@ -303,40 +303,60 @@
         </div>
     </section>
 
-    <section id="sec-quienessomos" class="full-page quiensomos">
-        <div class="container">
-            <div class="row full-page justify-content-center">
-                <div class="col-md-7 my-auto contenido-qs d-flex justify-content-center">
-                    <div class="content-qs">
+<section id="qss" class="sec-quienessomos">
+    <!--  Modificar con jquery-->
+    <!-- Visible en todos menos en dispositivos pequeños-->
+    <div class="row full-page  d-none d-sm-block">
+        <div class="col-12 full-page my-auto">
+            <!--El div tendra una imagen como fondo-->
+            <div class="container-qs" style="margin-top:30vh;">
+                <div class="row">
+                    <div class="col-5 offset-1 qs">
                         <div class="row">
-                            <div class="col-md-12"><h2 class="f-blue">QUIEN SOMOS</h2></div>
-                            <div class="col-6">
-                                <hr class="hr-warning"/>
+                            <div class="col-12"><h3>QUIENES SOMOS</h3></div>
+                            <div class="col-12">
+                                <p>
+                                    GeekHubs Travels es una agencia de viajes online creada en 2009 por un equipo de viajeros
+                                    entusiastas que deciden hacer de su pasión por conocer el mundo un modo de vida.
+                                    Desde nuestros inicios hemos diseñado mas de 500 viajes organizados a diferentes
+                                    destinos de Europa, Norteamérica y Asia.Nuestro objetivo ahora es ir ampliando horizontes
+                                    poco a poco.
+                                </p>
                             </div>
-                            <div class="col-md-12"><p class="bold">GeeksHubs Travels es una agencia de viajes online
-                                creda
-                                en
-                                2009 por un equipo de viajeros entusiastas de dicend hacer de su pasion por conocer el
-                                mundo
-                                un
-                                mode de vida. Desde nuestros inicios hemos diseñado mas de 500 viajes organizados a
-                                diferentes
-                                destinos de Europa, Norteamerica y Asia.Nuestro objetivo ahora es ir ampliando
-                                horizontes
-                                poco a
-                                poco.</p></div>
-                            <div class="col-md-12 d-flex justify-content-center">
-                                <button type="button" class="bg-blue btn btn-primary"><p
-                                        class=" my-auto f-amarillo bold">
-                                    DESCUBRIR</p></button>
-                            </div>
-
+                            <div class="col-12 d-flex justify-content-center"><button type="button" class="btn btn-warning  ">Ver destinos</button></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <!-- Visible solo en dispositivos pequeños -->
+    <div class="row  d-block d-sm-none">
+        <div class="col-12 ">
+            <!--El div tendra una imagen como fondo-->
+            <div class="container-qs2">
+                <div class="row">
+                    <div class="col-12 qs">
+                        <div class="row">
+                            <div class="col-12"><h3>QUIENES SOMOS</h3></div>
+                            <div class="col-12">
+                                <p>
+                                    GeekHubs Travels es una agencia de viajes online creada en 2009 por un equipo de viajeros
+                                    entusiastas que deciden hacer de su pasión por conocer el mundo un modo de vida.
+                                    Desde nuestros inicios hemos diseñado mas de 500 viajes organizados a diferentes
+                                    destinos de Europa, Norteamérica y Asia.Nuestro objetivo ahora es ir ampliando horizontes
+                                    poco a poco.
+                                </p>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center"><button type="button" class="btn btn-warning  ">Ver destinos</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--code...-->
+</section>
 
 
     <section id="sec-contacto" class="d-none d-sm-block contact full-page">

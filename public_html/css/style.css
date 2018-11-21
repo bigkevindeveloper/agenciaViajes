@@ -2,6 +2,9 @@
 .full-page {
 
 }
+.mitad-page{
+    height:30vh;
+}
 
 /*FUENTE DE COLORES*/
 .f-blanco {
@@ -204,52 +207,25 @@ header {
 .mv-price {background-color: #e0a800;}
 
 /*Quienes somos*/
-
-.quiensomos {
-    background-color: #b1d3df;
-    font-size: 1vh;
+.sec-quienessomos {
+    background: url("../md/quienessomos.jpg") center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding:2vh;
 }
-
-h2 {
-    font-size: 2vh;
-    font-weight: bold;
+.sec-quienessomosmovil{
+    background-color:aquamarine;
+    padding:2vh;
 }
-@media (min-width: 480px) {
-    h2{
-        font-size: 5vh;
-    }
-.quiensomos {
-    background: url(../md/quienessomos.png);
-    background-size: 100% 100%;
-    font-size: 3vh;
-}
-}
-
-.footer {
-    background-color: #141939;
-}
-
-.contenido-qs {
+.container-qs{
     min-height: 50vh;
-    padding: 10vh;
-    padding-left: 0vh;
+    margin-top: 30vh;
 }
-
-@media (min-width: 480px) {
-    .content-qs {
-        background-color: white;
-        padding: 10vh;
-        min-height: 50vh;
-        min-width: 50%;
-}
-    }
-
-.content-qs {
+.qs {
     background-color: white;
-    padding: 3vh;
-    min-height: 3vh;
-    min-width: 50%;
-
+    min-height: 50vh;
+    padding:4vh;
+}
 .hr-warning {
     background-color: #e0a800;
     height: 0.3vh;
