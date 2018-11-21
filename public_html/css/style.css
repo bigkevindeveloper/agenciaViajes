@@ -67,8 +67,9 @@
 
 /*=========================KEVIN RIVERA=================================*/
 .main {
-    background: url("../md/header.jpg");
-    background-size: 100% 100%;
+    background: url("../md/header.jpg") center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
     padding-top: 30vh;
 }
 
@@ -78,11 +79,12 @@ body {
 
 header {
     transition: 2s;
-
-    height: 17vh;
+    height: 15vh;
     position: fixed;
     z-index: 1;
     width: 100%;
+    padding-top:2vh;
+    padding-bottom:2vh;
     padding-left: 0px;
     padding-right: 0px;
     margin-right: 0px;
@@ -90,9 +92,10 @@ header {
 }
 
 .menu-fixed {
-    transition: 0.5s;
     background-color: rgba(0, 0, 0, 0.9);
-
+    -webkit-box-shadow: 1px 5px 5px -2px rgba(255,255,255,1);
+    -moz-box-shadow: 1px 5px 5px -2px rgba(255,255,255,1);
+    box-shadow: 1px 5px 5px -2px rgba(255,255,255,1);
 }
 
 .cont-logo {
@@ -110,17 +113,43 @@ header {
 .logo-container {
     padding-top: 1.3vh;
 }
+/*Menu desplegable*/
+.menu-desplegado {
+    padding-left: 0px;
+    background-color: rgba(20, 25, 57, 0.9);
+    padding-right: 0px;
+    position: fixed;
+    right: 0;
+    top: 15vh;
+    /*Opcionalmente tenemos dos opciones que el menu ocupe el alto completo de la pantalla o una parte parcial de el*/
+    -webkit-box-shadow: -3px 4px 5px -2px rgba(255,255,255,1);
+    -moz-box-shadow: -3px 4px 5px -2px rgba(255,255,255,1);
+    box-shadow: -3px 4px 5px -2px rgba(255,255,255,1);
+}
+.menu-desplegado ul{
+    list-style:none;
+    padding-left:2vh;
+}
+.menu-desplegado li{
+    padding-top:5vh;
+    padding-bottom:5vh;
+    text-align:center;
 
+}
+/**/
 .iconoweb {
-    width: 45%;
-    height: 6vh;
+    width: 18vh;
+    height:10vh;
 }
 
 .header2 {
     min-height: 40vh;
     margin-top: 5vh;
 }
-
+.botonDesplegable {
+    padding-top: 2vh;
+    padding-right: 5vh;
+}
 .menu-navegacion a {
     color: white;
     font-size: 1.3em;
@@ -148,7 +177,10 @@ header {
     width: 100%;
     height: 80%;
 }
-
+#sec-destinos{
+    padding-top:2vh;
+    padding-bottom:3vh;
+}
 .viaje-descripcion {
     height: 20%;
     width: 100%;
@@ -163,7 +195,7 @@ header {
 .pad0{padding:0}
 /*imagenes responsivas*/
 .m-carousel{
-    padding-top:10vh;
+    padding-top:8vh;
 }
 .mv-title{padding-right:0;padding-left:0}
 .m-img-viaje{height:60vh;padding:0}

@@ -12,19 +12,12 @@
 <div class="container-fluid">
     <header id="menu-navegacion" class="row">
         <!-- El header contendra: El logo, el menu, y el menu social -->
-        <div class="col-md-3 d-flex justify-content-left">
-            <div class="row logo-container">
-                <div class="col-md-12 ">
-                    <img id="logo" src="md/iconoweb.png" class="iconoweb img-responsive" alt="">
-                </div>
-                <div class="col-md-7 cont-titulo">
-                    <h4 class="titulo text-center f-negro">GeeksHubs<br>Travel</h4>
-                </div>
-            </div>
+        <div class="col-2 d-flex justify-content-left ">
+            <img id="logo" src="md/iconoweb.png" class="iconoweb img-responsive" alt="">
         </div>
-        <div class="col-md-6 d-flex justify-content-center">
+        <div class="col-8 d-flex justify-content-center">
             <!-- Menu -->
-            <div class="my-auto">
+            <div class="my-auto d-none d-sm-block">
                 <nav class="menu-navegacion">
                     <a id="btn-home" href="#">Inicio</a>
                     <a id="btn-destinos" href="#"><i>Destinos</i></a>
@@ -34,10 +27,11 @@
             </div>
 
         </div>
-        <div class="col-md-3 d-flex justify-content-end">
+        <div class="col-2 d-flex justify-content-end">
             <!-- Menu Social -->
-            <div class="my-auto">
-                <nav><!-- Iconosos sociales: twiter,whatsapp,facebook,instagram,linkedIn,Youtube -->
+            <div class="my-auto d-none d-sm-block">
+                <nav>
+                    <!-- Iconosos sociales: twiter,whatsapp,facebook,instagram,linkedIn,Youtube -->
                     <span><img src="md/social/twiter.png" alt=""></span>
                     <span><img src="md/social/whatsapp.png" alt=""></span>
                     <span><img src="md/social/facebook.png" alt=""></span>
@@ -46,13 +40,24 @@
                     <span><img src="md/social/youtube.png" alt=""></span>
                 </nav>
             </div>
+            <div class="d-block d-sm-none botonDesplegable">
+                <img id="burguer" src="md/menu.png" alt="Menu" />
+            </div>
+        </div>
+        <!--<div class="col-5"></div>Usamos esta columna para espaciar el menu desplegable:Investigra como mover x columnas-->
+        <div id="menu_desplegado" class="menu-desplegado col-7 offset-5 d-none ">
+            <ul>
+                <li id="bb-inicio"><p class="f-blanco">Inicio</p></li>
+                <li id="bb-viajes"><p class="f-blanco">Viajes</p></li>
+                <li id="bb-qs"><p class="f-blanco">Quienes somos</p></li>
+            </ul>
         </div>
     </header>
     <section id="sec-inicio" class="main full-page">
         <!-- Esta seccion del container contendra el header(menu)-> Con el logo, el menu y la seccion de social -->
         <div class="row header2 ">
             <div class="col-md-4"></div>
-            <div class="col-md-6">
+            <div class="col-md-6 d-none d-sm-block">
                 <!-- Sobre este div colocaremos el titulo,el pseudotitulo, y el boton de ver destinos -->
                 <div class="row">
                     <div class="col-12">
@@ -63,6 +68,22 @@
                     </div>
                     <div class="my-auto col-8 d-flex justify-content-center">
                         <button type="button" class="btn btn-warning btndestinos">Ver destinos</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Esta sera la descripcion para responsive -->
+            <div class="col-md-6 d-block d-sm-none">
+                <!-- Sobre este div colocaremos el titulo,el pseudotitulo, y el boton de ver destinos -->
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="f-blanco bold text-center">Viaja!</h1>
+                    </div>
+                    <div class="col-12">
+                        <h1 class="light f-blanco  fuente-media text-center">Descubre lugares maravillosos!</h1>
+                    </div>
+                    <div class="my-auto col-12 d-flex justify-content-center">
+                        <a href="#"></a>
+                        <button type="button" class="btn btn-warning  ">Ver destinos</button>
                     </div>
                 </div>
             </div>
