@@ -19,7 +19,7 @@ mysql -uroot -p$DBPASSWD -e"CREATE DATABASE $DBNAME" >> /vagrant/vm_mysql_build.
 mysql -uroot -p$DBPASSWD -e"grant all privileges on $DBNAME.* to '$DBUSER'@'%' identified by'$DBPASSWD' " >> /vagrant/vm_mysql_build.log
 echo -e "\n-- Instalando Node, NPM ---\n"
 apt-get -y install nodejs  && apt-get -y install nodejs-legacy  && apt-get -y install npm && apt-get -y install apache2
-git clone https://github.com/kevinriveradev/agenciaViajes.git
+# (En produccion )git clone  https://github.com/kevinriveradev/agenciaViajes.git /var/www/html
 ##npm install
 ##bower install
 ##npm start
