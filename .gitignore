@@ -1,8 +1,0 @@
-public_html/vendor
-node_modules/
-package-lock.json
-.idea
-.vagrant
-.idea/workspace.xml
-package-lock.json
-.idea/workspace.xml
