@@ -1,0 +1,69 @@
+
+<header id="menu-navegacion">
+    {{#if username}}
+    <div class="row d-none d-sm-block">
+        <div class="col-md-3 offset-md-9 d-flex justify-content-end" >
+            <p class="f-blanco">Bienvenido: <b>{{username}}</b> | <a class="f-blanco" style="text-decoration:none" href="/cerrarsesion"> Cerrar Sesion</a></p>
+        </div>
+    </div>
+    {{else}}
+    <div class="row d-none d-sm-block">
+        <div class="col-md-2 offset-md-10">
+            <a  class="text-center bartop" href="/registrar">Registrarse</a>
+            |
+            <a  class="text-center bartop" href="/iniciarsesion">Iniciar Sesion</a>
+        </div>
+    </div>
+    {{/if}}
+
+    <div class="row">
+        <!-- El header contendra: El logo, el menu, y el menu social -->
+        <div class="col-2 d-flex justify-content-left ">
+            <img id="logo" src="img/iconoweb.png" class="iconoweb img-responsive" alt="">
+        </div>
+        <div class="col-8 d-flex justify-content-center">
+            <!-- Menu -->
+            <div class="my-auto d-none d-sm-block">
+                <nav class="menu-navegacion">
+                   
+                    <a id="btn-home" href="#">Inicio</a>
+                    <a id="btn-destinos" href="#"><i>Destinos</i></a>
+                    <a id="btn-quien" href="#"><i>Quienes somos</i></a>
+                    <a id="btn-donde" href="#"><i>Donde estamos</i></a>
+                </nav>
+            </div>
+
+        </div>
+        <div class="col-2 d-flex justify-content-end">
+
+            <!-- Menu Social -->
+            <div class="my-auto d-none d-sm-block">
+                <nav>
+                    <!-- Iconosos sociales: twiter,whatsapp,facebook,instagram,linkedIn,Youtube -->
+                    <span><img src="img/social/twiter.png" alt=""></span>
+                    <span><img src="img/social/whatsapp.png" alt=""></span>
+                    <span><img src="img/social/facebook.png" alt=""></span>
+                    <span><img src="img/social/youtube.png" alt=""></span>
+                </nav>
+            </div>
+            <div class="d-block d-sm-none botonDesplegable">
+                <img id="burguer" src="img/menu.png" alt="Menu" />
+            </div>
+        </div>
+        <!--<div class="col-5"></div>Usamos esta columna para espaciar el menu desplegable:Investigra como mover x columnas-->
+        <div id="menu_desplegado" class="menu-desplegado col-12 d-none ">
+            <ul>
+                {{#if username}}
+                <li><p class="text-center f-blanco">Hola: <b>{{username}} </b> | <a href="/cerrarsesion"> <img src="img/close.png"></img></a></p></li>
+                {{else}}
+                <li><a class="text-center f-blanco" href="/iniciarsesion" style="text-decoration:none">Iniciar Sesion</a></li>
+                <li><a class="text-center f-blanco" href="/registrar">Registrarse</a></li>
+                {{/if}}
+                <li id="bb-inicio"><p class="f-blanco">Inicio</p></li>
+                <li id="bb-viajes"><p class="f-blanco">Viajes</p></li>
+                <li id="bb-qs"><p class="f-blanco">Quienes somos</p></li>
+            </ul>
+        </div>
+    </div>
+
+</header>

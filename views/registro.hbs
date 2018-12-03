@@ -1,0 +1,52 @@
+<div class="log full-page">
+    <div class="row d-flex justify-content-center">
+        <div class="col-5 log-contentRegistro">
+            <div class="col-12 register ">
+                <!-- BOX CON EL CONTENIDO DEL LOGIN -->
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center">REGISTRATE</h2>
+                    </div>
+                </div>
+                
+                <div class="row">
+
+                    <form id="formularioRegistro" class="col-12" action="/registropost" method="post">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                                <!-- username de usuario-->
+                                <input class="input-size" name="usuario" type="text" required autocomplete="on" placeholder="* Nombre de usuario" />
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <!-- Email de usuario -->
+                                <input  class="input-size email-input" name="email" type="email" required autocomplete="on" placeholder="* Email" />
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <!--Contraseña-->
+                                <input id="pass1" class="input-size" name="password" required type="password" autocomplete="on" placeholder="* clave" />
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <!-- Verificacion de contraseña-->
+                                <input id="pass2" class="input-size" type="password" required autocomplete="on" placeholder="* Clave" />
+                            </div>
+                            <div class="logRegistro col-12">
+                                <p class="text-center" id="log" >
+                                    {{#if error}}
+                                    {{error}}
+                                    {{/if}}
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </form>
+                    <div class="col-12 d-flex justify-content-center">
+                        <button id="btnregistro" class="btn btn-outline-secondary" style="color:black">Registrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
