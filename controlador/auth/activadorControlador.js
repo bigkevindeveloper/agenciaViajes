@@ -18,7 +18,9 @@ class controladorActivacion extends controladorbase {
                 let respuesta = await modelo.activarUsuario(resultado[0].id);
                 /*Borramos el hash del usuario y redirijimos al login*/
                 let answer = await modelo.borrarHash(resultado[0].id);
-                this.res.send('USUARIO ACTIVADO');
+                //Desde aqui enviamos los usuario a una vista que te dira que el usuario ya esta activado.
+                this.req.session.usuario = resultado[0].usuario;
+                this.res.redirect('/activado');
             } catch (e) {
                 console.log('Error al activar el usuario porque: -> ' + respuesta);
             }

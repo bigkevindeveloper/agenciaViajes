@@ -511,3 +511,42 @@ header {
     margin-bottom: 2vh;
     padding-top:2vh;
 }
+/*Pantalla de bienvenida*/
+.bienvenida {
+    background-image: url(../images/welcomegeek.jpg);
+    background-size: 100% 100%;
+    min-height:100vh;
+    padding-top:30vh;
+}
+.contenido-bienvenida {
+    padding: 6vh;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+.contenido-bienvenida h3{
+    font-weight:bold;
+    color:black;
+}
+.contenido-bienvenida p{
+    font-size:1.2em;
+    color:black;
+}
+
+/*====== Área administración ========*/
+.administracion{
+    background-image:url(../images/administracion.jpg)
+}
+
+.gard {
+    background-image: linear-gradient(to bottom right, #FFC2F0, #FFDBC2);
+}
+
+.buttonTrahs {
+    width: 33px;
+    height: 33px;
+}
+.Panel{
+    padding-top:25vh;
+}

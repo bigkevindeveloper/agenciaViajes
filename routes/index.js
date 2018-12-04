@@ -53,6 +53,14 @@ router.get('/activate/:hash', function (req, res, next){
     control.activarUsuario();
 });
 
+router.get('/activado', function (req, res, next) {
+    res.render('registrado');
+});
+/*Ruta para el panel de administracion*/
+router.get('/panelcontrol', function (req, res, next) {
+    res.render('administracion')
+});
+
 
 
 

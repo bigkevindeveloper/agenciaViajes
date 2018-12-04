@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\controlador",
+    "\\controlador\\auth",
+    "\\public",
+    "\\public\\images",
+    "\\public\\stylesheets",
+    "\\routes",
+    "\\views"
+  ],
+  "SelectedNode": "\\routes\\index.js",
+  "PreviewInSolutionExplorer": false
+}
