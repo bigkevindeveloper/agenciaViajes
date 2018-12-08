@@ -43,101 +43,80 @@
             <div class="col-md-12 d-none d-sm-block">
                 <div class="row">
                     <!-- En esta seccion se autogeneran los distintos viajes
-                        cada columna correspondera a un viaje distinto, este por dentro contendra un div,
-                        que estara centrado tanto horizontal como verticalmente. -->
+            cada columna correspondera a un viaje distinto, este por dentro contendra un div,
+            que estara centrado tanto horizontal como verticalmente. -->
                     {{#if viajes.length}}
                     {{#each viajes}}
-                        
-                            <div class="col-md-4  contenedor-viaje d-flex justify-content-center">
-                                <div class="item-viaje my-auto">
-                                    <div class="row correccion">
-                                        <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title">{{viaje}}</h5></div>
-                                    </div>
-                                    <img src="img/{{ruta}}" class="img-responsive" alt="">
-                                    <div class="row viaje-descripcion">
-                                        <div class="col-md-8 my-auto vd">
-                                            <h6 class="f-blanco">{{descripcion}}</h6>
-                                        </div>
-                                        <div class="col-md-4 bg-yellow">
-                                            <div class="vp my-auto">
-                                                <p class="f-blanco">{{precio}}</p>
-                                            </div>
-                                        </div>
+
+                    <div class="col-md-4  contenedor-viaje d-flex justify-content-center">
+                        <div class="item-viaje my-auto">
+                            <div class="row correccion">
+                                <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title">{{viaje}}</h5></div>
+                            </div>
+                            <img src="img/{{ruta}}" class="img-responsive" alt="">
+                            <div class="row viaje-descripcion">
+                                <div class="col-md-8 my-auto vd">
+                                    <h6 class="f-blanco">{{descripcion}}</h6>
+                                </div>
+                                <div class="col-md-4 bg-yellow">
+                                    <div class="vp my-auto">
+                                        <p class="f-blanco text-center">{{precio}}$</p>
                                     </div>
                                 </div>
                             </div>
-                    
+                        </div>
+                    </div>
+
                     {{/each}}
                     {{else}}
                     <p>No existen viajes</p>
                     {{/if}}
                     <!--*****************GENERACION DE VIAJES************************-->
-                    
+
+                </div>
             </div>
             <!--SECCION DE VIAJES PARA MOVIL-->
-            <div class="col-12 my-auto h-100 d-block d-sm-none m-carousel">
+            <div class="col-12 my-auto  d-block d-sm-none m-carousel">
                 <!-- Carousel -->
-                <div id="carouselExampleControls" style="height:80vh" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleControls" style="min-height:80vh" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <!--  Box correspondiente a cada destino -->
-                            <div class="row">
-                                <div class="col-12 bg-blue mv-title"> <h3 class="text-center f-blanco">MADRID</h3></div><!--Titulo destino-->
-                                <div class="col-12 pad0"><img src="img/madrid.jpg" class="img-responsive" alt="Alternate Text" /></div><!--Imagen del destino-->
-                                <!-- Descripcion y precio del destino-->
-                                <div class="col-12 mv-txt pad0">
+                        {{#if viajes.length}}
+                            {{#each viajes}}
+                            <!-- Al primer objeto de los viajes le pasamos un parametro especifico-->
+                                {{#if @first}}
+                                <div class="carousel-item active">
+                                    <!--  Box correspondiente a cada destino -->
                                     <div class="row">
-                                        <div class="col-8 mv-des"><h5 class="f-blanco">Save 65$ pay</h5></div>
-                                        <div class="col-4 mv-price"><h4 class="f-blanco text-center">455$</h4></div>
-                                    </div>
-                                </div>
+                                        <div class="col-12 bg-blue mv-title"> <h3 class="text-center f-blanco">{{viaje}}</h3></div><!--Titulo destino-->
+                                        <div class="col-12 pad0"><img src="img/{{ruta}}" class="img-responsive" alt="Alternate Text" /></div><!--Imagen del destino-->
+                                        <!-- Descripcion y precio del destino-->
+                                        <div class="col-12 mv-txt pad0">
+                                            <div class="row">
+                                                <div class="col-8 mv-des"><h5 class="f-blanco">{{descripcion}}</h5></div>
+                                                <div class="col-4 mv-price"><h4 class="f-blanco text-center">{{precio}}$</h4></div>
+                                            </div>
+                                        </div>
 
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <!--  Box correspondiente a cada destino -->
-                            <div class="row">
-                                <div class="col-12 bg-blue mv-title"> <h3 class="text-center f-blanco">BEIJING</h3></div><!--Titulo destino-->
-                                <div class="col-12 pad0"><img src="img/beijing.jpg" class="img-responsive" alt="Alternate Text" /></div><!--Imagen del destino-->
-                                <!-- Descripcion y precio del destino-->
-                                <div class="col-12 mv-txt pad0">
-                                    <div class="row">
-                                        <div class="col-8 mv-des"><h5 class="f-blanco">Save 65$ pay</h5></div>
-                                        <div class="col-4 mv-price"><h4 class="f-blanco text-center">455$</h4></div>
                                     </div>
                                 </div>
+                                {{/if}}
+                                <div class="carousel-item ">
+                                    <!--  Box correspondiente a cada destino -->
+                                    <div class="row">
+                                        <div class="col-12 bg-blue mv-title"> <h3 class="text-center f-blanco">{{viaje}}</h3></div><!--Titulo destino-->
+                                        <div class="col-12 pad0"><img src="img/{{ruta}}" class="img-responsive" alt="Alternate Text" /></div><!--Imagen del destino-->
+                                        <!-- Descripcion y precio del destino-->
+                                        <div class="col-12 mv-txt pad0">
+                                            <div class="row">
+                                                <div class="col-8 mv-des"><h5 class="f-blanco">{{descripcion}}</h5></div>
+                                                <div class="col-4 mv-price"><h4 class="f-blanco text-center">{{precio}}$</h4></div>
+                                            </div>
+                                        </div>
 
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <!--  Box correspondiente a cada destino -->
-                            <div class="row">
-                                <div class="col-12 bg-blue mv-title"> <h3 class="text-center f-blanco">BUENOS AIRES</h3></div><!--Titulo destino-->
-                                <div class="col-12 pad0"><img src="img/buenos_aires.jpg" class="img-responsive" alt="Alternate Text" /></div><!--Imagen del destino-->
-                                <!-- Descripcion y precio del destino-->
-                                <div class="col-12 mv-txt pad0">
-                                    <div class="row">
-                                        <div class="col-8 mv-des"><h5 class="f-blanco">Save 65$ pay</h5></div>
-                                        <div class="col-4 mv-price"><h4 class="f-blanco text-center">455$</h4></div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <!--  Box correspondiente a cada destino -->
-                            <div class="row">
-                                <div class="col-12 bg-blue mv-title"> <h3 class="text-center f-blanco">NEW_YORK</h3></div><!--Titulo destino-->
-                                <div class="col-12 pad0"><img src="img/new_york.jpg" class="img-responsive" alt="Alternate Text" /></div><!--Imagen del destino-->
-                                <!-- Descripcion y precio del destino-->
-                                <div class="col-12 mv-txt pad0">
-                                    <div class="row">
-                                        <div class="col-8 mv-des"><h5 class="f-blanco">Save 65$ pay</h5></div>
-                                        <div class="col-4 mv-price"><h4 class="f-blanco text-center">455$</h4></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                            {{/each}}
+                        {{/if}}                      
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -149,7 +128,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+       
     </div>
 
 

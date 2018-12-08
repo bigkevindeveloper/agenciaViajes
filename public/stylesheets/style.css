@@ -199,8 +199,9 @@ header {
     }
 
 #sec-destinos {
-    padding-top: 2vh;
+    
     padding-bottom: 3vh;
+    min-height:100vh;
 }
 
 .viaje-descripcion {
