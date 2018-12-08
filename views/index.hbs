@@ -38,133 +38,41 @@
 
 <section id="sec-destinos" class="viajes full-page">
     <div class="container">
-        <div class="row " style="height:100vh">
+        <div class="row " style="min-height:100vh">
             <!-- SECCION DE VIAJES PARA DESKTOP -->
             <div class="col-md-12 d-none d-sm-block">
-                <!-- En esta seccion se autogeneran los distintos viajes
-                cada columna correspondera a un viaje distinto, este por dentro contendra un div, que estara centrado tanto horizontal como verticalmente. -->
                 <div class="row">
-                    <!-- **********Seccion de un viaje INICIO*********** -->
-                    <div class="col-md-4  contenedor-viaje d-flex justify-content-center">
-                        <div class="item-viaje my-auto">
-                            <div class="row correccion">
-                                <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title">MADRID</h5></div>
-                            </div>
-                            <img src="img/madrid.jpg" class="img-responsive" alt="">
-                            <div class="row viaje-descripcion">
-                                <div class="col-md-8 my-auto vd">
-                                    <h6 class="f-blanco">Save 65$ pay only</h6>
-                                </div>
-                                <div class="col-md-4 bg-yellow">
-                                    <div class="vp my-auto">
-                                        <p class="f-blanco">455 $</p>
+                    <!-- En esta seccion se autogeneran los distintos viajes
+                        cada columna correspondera a un viaje distinto, este por dentro contendra un div,
+                        que estara centrado tanto horizontal como verticalmente. -->
+                    {{#if viajes.length}}
+                    {{#each viajes}}
+                        
+                            <div class="col-md-4  contenedor-viaje d-flex justify-content-center">
+                                <div class="item-viaje my-auto">
+                                    <div class="row correccion">
+                                        <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title">{{viaje}}</h5></div>
+                                    </div>
+                                    <img src="img/{{ruta}}" class="img-responsive" alt="">
+                                    <div class="row viaje-descripcion">
+                                        <div class="col-md-8 my-auto vd">
+                                            <h6 class="f-blanco">{{descripcion}}</h6>
+                                        </div>
+                                        <div class="col-md-4 bg-yellow">
+                                            <div class="vp my-auto">
+                                                <p class="f-blanco">{{precio}}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- *************************FIN*********************** -->
-                    <!-- **********Seccion de un viaje INICIO*********** -->
-                    <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
-                        <div class="item-viaje my-auto">
-                            <div class="row correccion">
-                                <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title">BEIJING</h5></div>
-                            </div>
-                            <img src="img/beijing.jpg" class="img-responsive" alt="">
-                            <div class="row viaje-descripcion">
-                                <div class="col-md-8 my-auto vd">
-                                    <h6 class="f-blanco">Save 65$ pay only</h6>
-                                </div>
-                                <div class="col-md-4 bg-yellow">
-                                    <div class="vp my-auto">
-                                        <p class="f-blanco">455 $</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- *************************FIN*********************** -->
-                    <!-- **********Seccion de un viaje INICIO*********** -->
-                    <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
-                        <div class="item-viaje my-auto">
-                            <div class="row correccion">
-                                <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title">CIUDAD DE MEXICO</h5></div>
-                            </div>
-                            <img src="img/ciudad_mexico.jpg" class="img-responsive" alt="">
-                            <div class="row viaje-descripcion">
-                                <div class="col-md-8 my-auto vd">
-                                    <h6 class="f-blanco">Save 65$ pay only</h6>
-                                </div>
-                                <div class="col-md-4 bg-yellow">
-                                    <div class="vp my-auto">
-                                        <p class="f-blanco">455 $</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- *************************FIN*********************** -->
-                    <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
-                        <div class="item-viaje my-auto">
-                            <div class="row correccion">
-                                <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title">NEW YORK</h5></div>
-                            </div>
-                            <img src="img/new_york.jpg" class="img-responsive" alt="">
-                            <div class="row viaje-descripcion">
-                                <div class="col-md-8 my-auto vd">
-                                    <h6 class="f-blanco">Save 65$ pay only</h6>
-                                </div>
-                                <div class="col-md-4 bg-yellow">
-                                    <div class="vp my-auto">
-                                        <p class="f-blanco">455 $</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- *************************FIN*********************** -->
-                    <!-- **********Seccion de un viaje INICIO*********** -->
-                    <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
-                        <div class="item-viaje my-auto">
-                            <div class="row correccion">
-                                <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title">TOKYO</h5></div>
-                            </div>
-                            <img src="img/tokyo.jpg" class="img-responsive" alt="">
-                            <div class="row viaje-descripcion">
-                                <div class="col-md-8 my-auto vd">
-                                    <h6 class="f-blanco">Save 65$ pay only</h6>
-                                </div>
-                                <div class="col-md-4 bg-yellow">
-                                    <div class="vp my-auto">
-                                        <p class="f-blanco">455 $</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- *************************FIN*********************** -->
-                    <!-- **********Seccion de un viaje INICIO*********** -->
-                    <div class="col-md-4 contenedor-viaje d-flex justify-content-center">
-                        <div class="item-viaje my-auto">
-                            <div class="row correccion">
-                                <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title ">BUENOS AIRES</h5></div>
-                            </div>
-                            <img src="img/buenos_aires.jpg" class="img-responsive" alt="">
-                            <div class="row viaje-descripcion">
-                                <div class="col-md-8 my-auto vd">
-                                    <h6 class="f-blanco">Save 65$ pay only</h6>
-                                </div>
-                                <div class="col-md-4 bg-yellow">
-                                    <div class="vp my-auto">
-                                        <p class="f-blanco">455 $</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- *************************FIN*********************** -->
-
-                </div>
+                    
+                    {{/each}}
+                    {{else}}
+                    <p>No existen viajes</p>
+                    {{/if}}
+                    <!--*****************GENERACION DE VIAJES************************-->
+                    
             </div>
             <!--SECCION DE VIAJES PARA MOVIL-->
             <div class="col-12 my-auto h-100 d-block d-sm-none m-carousel">

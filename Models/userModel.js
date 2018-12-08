@@ -38,6 +38,18 @@ class usuario {
         })
     }
 
+    obtenerByUsername(username) {
+        return new Promise((res, req) => {
+            if (!conn) return rej('No se conecto a la BDD');
+            let CONSULTA = 'SELECT * from usuarios where usuario="' + username + '"';
+            console.log(CONSULTA);
+            this.conn.query(CONSULTA, (error, respuesta) => {
+                if (error) return req("No se pudo obtener el  usuario -> " + error);
+                return res(respuesta);
+            });
+        })
+    }
+
     obtenerByHash(hash) {
         return new Promise((res, req) => {
             if (!conn) return rej('No se conecto a la BDD');

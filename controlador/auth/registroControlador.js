@@ -10,6 +10,11 @@ class registroControlador extends controlador {
         super(res,req,next)
     }
     index() {
+        //Si hay una session habilitamos el nombre de usuario en el header.
+        if (this.req.session.username) {
+            this.res.render('registro', { username: this.req.session.username });
+            console.log('existe el usuario');
+        }
         if (this.req.flash.error) {
             this.res.render('registro', { error: this.req.flash.error });
             this.req.flash.error = null;
@@ -57,7 +62,8 @@ class registroControlador extends controlador {
                 usuario: usuario,
                 email: emailcampo,
                 password: passEncrypt,
-                hash: uuidv1()
+                hash: uuidv1(),
+                role: 1
             }
             try {
                 let resultado = await controlUsuario.insert(user);

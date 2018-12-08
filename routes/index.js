@@ -5,6 +5,19 @@ const controlador_logeo = require('../controlador/auth/logeoControlador');
 const controlador_activacion = require('../controlador/auth/activadorControlador');
 const controladorMain = require('../controlador/homeControlador');
 const body_parser = require('body-parser');
+const controladorViaje = require('../controlador/administrador/controladorViajes');
+const contraladorPanel = require('../controlador/administrador/controladorPanel');
+var multer = require('multer')
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'public/images/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now() + '.png');
+    }
+});
+
+var upload = multer({ storage: storage }) 
 
 /**
  * Configuracion de enrutamiento.
@@ -58,7 +71,20 @@ router.get('/activado', function (req, res, next) {
 });
 /*Ruta para el panel de administracion*/
 router.get('/panelcontrol', function (req, res, next) {
-    res.render('administracion')
+    let control = new contraladorPanel(res,req,next);
+    control.index();
+});
+/*Subida de viajes*/
+router.post('/upviaje', upload.single('archivo'), function (req, res, next) {
+    var imagen = req.file.filename;
+    var control = new controladorViaje(res, req, next);
+    control.addviaje(imagen);
+});
+/*Borrar viaje*/
+router.post('/panelcontrol', function (req, res, next) {
+    console.log('borrar');
+    var control = new controladorViaje(res, req, next);
+    control.borrarViaje();
 });
 
 

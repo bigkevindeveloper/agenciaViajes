@@ -8,6 +8,9 @@ class loginControlador extends controlador {
         super(res, req, next)
     }
     index() {
+        if (this.req.session.username) {
+            this.res.render('login', { username: this.req.session.username });
+        }
         if (this.req.flash.passfail) {
             this.res.render('login', { error: this.req.flash.passfail });
             this.req.flash.error = null;

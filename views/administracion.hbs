@@ -1,4 +1,88 @@
 <div class="full-page administracion">
+    <!-- Ventanas oculta de subida de viaje -->
+    <div id="ventanaSubida" class="row justify-content-center formularioSubida d-none">
+        <div class="formulario">
+            <div class="col-12 d-flex justify-content-end">
+                <img id="btn-salir" src="img/icon.png" alt="Salir" />
+            </div>
+            <div class="col-12">
+                <h2 class="text-center">Agregar viaje</h2>
+            </div>
+            <hr />
+            <!-- Agregamos el formulario con las opciones de cada viaje: viaje, descripcion, estado, precio, tipo -->
+            <form action="/upviaje" method="post" class="row formul" enctype="multipart/form-data" >
+                <!--VIAJE-->
+                <div class="col-3"><p class="text-right"><b>Destino: </b></p></div>
+                <div class="col-9">
+                    <input type="text" name="viaje" maxlength="40" value="" placeholder="Introduce el destino" />
+                </div>
+                <!-- PRECIO -->
+                <div class="col-3"><p class="text-right"><b>Precio: </b></p></div>
+                <div class="col-9">
+                    <input type="text" name="precio" maxlength="40" value="" placeholder="Introduce el precio" />
+                </div>
+
+                <!-- TIPO DE VIAJE: FAMILIAR, SOLITARIO, AVENTURERO -->
+                <div class="col-3"><p class="text-right"><b>Tipo de viaje:</b></p></div>
+                <div class="col-9">
+                    <select name="tipoviaje">
+                        <option value="familiar">Familiar</option>
+                        <option value="solitario">Solitario</option>
+                        <option value="Aventurero">Aventurero</option>
+                    </select>
+                </div>
+                <!-- Estado -->
+                <div class="col-3"><p class="text-right"><b>Estado del viaje:</b></p></div>
+                <div class="col-9">
+                    <select name="estado">
+                        <option value="activo">Activo</option>
+                        <option value="desactivado">Desactivo</option>
+                    </select>
+                </div>
+                <!-- Descripcion -->
+                <div class="col-3"><p class="text-right"><b>Descripcion: </b></p></div>
+                <div class="col-9">
+                    <input style="width:80%;height:10vh;" type="text" name="descripcion" placeholder="Escribe una breve descripcion" maxlength="200" />
+                </div>
+                <!-- SUBIDA DE IMAGEN -->
+                <div class="col-3"><p class="text-right"><b>Imagen del viaje: </b></p></div>
+                <div class="col-9">
+                    <input type="file" name="archivo" />
+                    <span>| Medida de imagen recomendadas: 640 x 500</span>
+                </div>
+                
+                <!-- Boton de envio -->
+                <div style="margin-top:3vh;" class="col-12 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-success">SUBIR VIAJE</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <!-- ********************************** -->
+    <!-- Pagina oculta de eliminar viaje -->
+     <!-- Ventanas oculta de subida de viaje -->
+    <div id="ventanaBorrar" class="row justify-content-center formularioEliminacion d-none">
+        <div class="formularioEliminar">
+            <div class="col-12 d-flex justify-content-end">
+                <img id="btn-salirEliminar" src="img/icon.png" alt="Salir" />
+            </div>
+            <div class="col-12">
+                <h2 class="text-center">Eliminar viaje</h2>
+                <p class="text-center">Introduzca el ID del viaje que desea eliminar</p>
+            </div>
+            <hr />
+            <form action="" method="POST">
+                <div class="col-12 d-flex justify-content-center">
+                    <input type="number" name="id" value="" placeholder="ID del viaje" />
+                </div>
+                <div class="col-12 d-flex justify-content-center" style="margin-top:2vh;">
+                    <button type="submit" class="btn btn-danger">Eliminar viaje</button>
+                </div>
+            </form>
+        </div>
+    </div>
+     <!-- **********************************-->
     <div class="container Panel">
         <div class="row">
             <div class="col-12 ">
@@ -18,83 +102,39 @@
                             <th scope="col">Imagen</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Activado</th>
-                            <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
                     <tbody class="gard">
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td colspan="2"></td>
-                            <td>
-                                <img src=" ../public/img/loupe.png">
-                            </td>
-                            <td></td>
-                            <td>
-                                <div class="form-check ">
-                                    <label class="form-check-label align-middle">
-                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-info">
-                                    <img src="../public/img/trash.png">
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="mt-2">
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td colspan="2"></td>
-                            <td>
-                                <img src=" ../public/img/loupe.png">
-                            </td>
-                            <td></td>
-                            <td>
-                                <div class="form-check">
-                                    <label class="form-check-label align-middle">
-                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-info">
-                                    <img src="../public/img/trash.png">
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td colspan="2"></td>
-                            <td>
-                                <img src=" ../public/img/loupe.png">
-                            </td>
-                            <td></td>
-                            <td>
-                                <div class="form-check">
-                                    <label class="form-check-label align-middle">
-                                        <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-info">
-                                    <img src="../public/img/trash.png">
-                                </button>
-                            </td>
-                        </tr>
+                        <!-- Dentro del cuerpo body instanciaremos los elementos de la tabla de la base de datos-->
+                        {{#if arrayviajes.length}}
+                        {{#each arrayviajes}}
+                            <tr>
+                                <td scope="row">{{id}}</td>
+                                <td>{{viaje}}</td>
+                                <td>No fecha</td>
+                                <td colspan="2">{{descripcion}}</td>
+                                <td class="d-flex justify-content-center">
+                                    <img style="border:1px solid #000" width="20%" height="20%" src="img/{{ruta}}">
+                                </td>
+                                <td>{{precio}}</td>
+                                <td>{{estado}}</td>
+                                
+                            </tr>
+                        {{/each}}
+                        {{else}}
+                        <p>No hay viajes</p>
+                        {{/if}}
+                        <!-- Si no existen elementos en la base de datos-->
+                        
+                        
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
-                <a href="#" ><button class="btn btn-primary">Agregar</button></a>
+                <a id="btn-subir" href="#"><button class="btn btn-primary">Agregar viaje</button></a>
+                <a id="btn-borrar" href="#" style="margin-left:1vh;"><button class="btn btn-danger">Borrar viaje</button></a>
             </div>
         </div>
     </div>

@@ -45,6 +45,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 /*Mapeamos las carpetas de componentes de bower*/
 //app.use('/mail', require('./servicios/mailer.js'));
+
 app.use('components', express.static(`${__dirname}/public/components`));
 app.use('/img', express.static(`${__dirname}/public/images`));
 app.use('/style', express.static(`${__dirname}/public/stylesheets`));

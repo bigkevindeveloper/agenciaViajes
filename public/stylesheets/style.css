@@ -536,7 +536,8 @@ header {
 
 /*====== Área administración ========*/
 .administracion{
-    background-image:url(../images/administracion.jpg)
+    background-color: darkgrey;
+    padding-bottom:4vh;
 }
 
 .gard {
@@ -549,4 +550,40 @@ header {
 }
 .Panel{
     padding-top:25vh;
+}
+/*-------FORMULARIO DE SUBIDA--------*/
+.formularioSubida {
+    background-color: red;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.formulario{
+    background-color:white;
+    height:80vh;
+    min-width:50vw;
+    margin-top:10vh;
+    padding:2vh;
+}
+.formul{
+    margin-top:3vh;
+}
+
+/*---------FORMULARIO DE ELIMINACION--------*/
+.formularioEliminacion {
+    background-color: red;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.formularioEliminar {
+    background-color: white;
+    height: 40vh;
+    min-width: 40vw;
+    margin-top: 30vh;
+    padding: 2vh;
 }
