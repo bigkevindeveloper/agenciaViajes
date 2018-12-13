@@ -19,14 +19,10 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage }) 
 
-/**
- * Configuracion de enrutamiento.
- * **/
 router.use(body_parser.urlencoded({ extended: true }));
 
 /* Ruta index. */
 router.get('/', function (req, res, next) {
-    console.log('entro en funcion');
     let control = new controladorMain(res, req, next);
     control.index();
 });

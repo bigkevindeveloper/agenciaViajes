@@ -1,6 +1,6 @@
 const controlador = require('../controlador');
-const modeloViaje = require('../../Models/viajeModel');
-const modeloUsuario = require('../../Models/userModel');
+const modeloViaje = require('../../Models/viajeModelo');
+const modeloUsuario = require('../../Models/usuarioModelo');
 class controladorPrincipal extends controlador {
     constructor(res, req, next) {
         super(res, req, next);
@@ -11,9 +11,9 @@ class controladorPrincipal extends controlador {
         }
         /*Comprabaremos que el usuario sea administrador*/
         /*Si es administrador tendra acceso al panel de control*/
-        let modelo = new modeloUsuario();
+       
         try {
-            let res = await modelo.obtenerByUsername(this.req.session.username);
+            let res = await modeloUsuario.find({ where: { usuario : username } });
             if (res[0].role != 2) {
                 this.res.redirect('/');
             }
@@ -33,8 +33,7 @@ class controladorPrincipal extends controlador {
         }
         /*1ºCargamos los viajes...!*/
         try {
-            let modeloviaje = new modeloViaje();
-            var viajes = await modeloviaje.obtenerTodos();
+            var viajes = await modeloViaje.findAll();
         } catch (e) {
             console.log('error -> ' + e);
         }

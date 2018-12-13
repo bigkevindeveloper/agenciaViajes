@@ -1,25 +1,22 @@
 const controladorbase = require('../controlador');
-const usuariomodelo = require('../../Models/userModel');
-
+const usuariomodelo = require('../../Models/usuarioModelo');
+const mu = require('../../Models/viajeModelo');
 class controladorActivacion extends controladorbase {
     constructor(res,req,next) {
         super(res,req,next)
     }
     async activarUsuario() {
         var hash = this.req.params.hash;
-        var modelo = new usuariomodelo();
         /*Buscamos el usuario con ese hash*/
         try {
-            let resultado = await modelo.obtenerByHash(hash);
+            let resultado = await usuariomodelo.find({ where: { hash: this.req.params.hash } });
             //Resultado nos proporciona el id del cliente.
             //Ahora intentamos activar el usuario.
             try {
-                console.log(resultado[0].id)
-                let respuesta = await modelo.activarUsuario(resultado[0].id);
                 /*Borramos el hash del usuario y redirijimos al login*/
-                let answer = await modelo.borrarHash(resultado[0].id);
+                let answer = await mu.update({ hash: '' }, { id: JSON.stringify(resultado.id) });
                 //Desde aqui enviamos los usuario a una vista que te dira que el usuario ya esta activado.
-                this.req.session.usuario = resultado[0].usuario;
+                this.req.session.usuario = JSON.stringify(resultado.usuario);
                 this.res.redirect('/activado');
             } catch (e) {
                 console.log('Error al activar el usuario porque: -> ' + respuesta);

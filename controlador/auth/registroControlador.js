@@ -1,8 +1,11 @@
 const controlador = require('../controlador');
-const modelousuario = require('../../Models/userModel');
 const encriptador = require('../../servicios/encriptamiento');
 const uuidv1 = require('uuid/v1');
 const email = require('../../servicios/email');
+/*Sequelize*/
+const usuarioModelo = require('../../Models/usuarioModelo');
+/*password-hash*/
+var passwordHash = require('password-hash');
 
 
 class registroControlador extends controlador {
@@ -24,9 +27,7 @@ class registroControlador extends controlador {
     }
     async insertarUsuario() {
         /*Limpiamos la peticion*/
-        this.req.flash.error = null;
-        /*Controlador de usuarios*/
-        let controlUsuario = new modelousuario();
+        this.req.flash.error = null; 
         /*Recibir los parametros enviados en el formulario*/
         var usuario = this.req.body.usuario;
         var emailcampo = this.req.body.email;
@@ -39,34 +40,34 @@ class registroControlador extends controlador {
         let existeEmail = false;
         let existeUser = false;
         try {
-            var tabla_usuarios = await controlUsuario.obtenerTodos();
-            tabla = tabla_usuarios.slice();
-            for (var i = 0; i <= tabla.length; i++) {
-                if (tabla[i].email === this.req.body.email) {
+            var tabla_usuarios = await usuarioModelo.all();
+           
+            console.log('++++TABLA USAURIOS++++');
+            for (var i = 0; i < tabla_usuarios.length; i++) {
+                console.log(tabla_usuarios[i].usuario);
+                if (tabla_usuarios[i].email === emailcampo) {
                     existeEmail = true;
-                    //Si el email existe hacemos una redireccion a rejistro hbs con el error de email existente.
                 }
-                if (tabla[i].usuario === this.req.body.usuario) {
+                if (tabla_usuarios[i].usuario === usuario) {
                     existeUser = true;
                 }
-
             }
+            
         } catch (e) {
-            console.log("No se han podido recibir los usuarios" + e);
+            console.log("ERROR No se han podido recibir los usuarios::::" + e);
         }
-        /*Encriptacion de la contraseña*/
-        var passEncrypt = encriptador.encriptarPass(password);
+       
         /*Si existe es igual a false podremos procedes a registrar al usuario*/
         if (!existeEmail && !existeUser) {
             let user = {
                 usuario: usuario,
                 email: emailcampo,
-                password: passEncrypt,
+                password: encriptador.encriptarPass(password),
                 hash: uuidv1(),
                 role: 1
             }
             try {
-                let resultado = await controlUsuario.insert(user);
+                let resultado = await usuarioModelo.create(user);
                 /*Comprobamos q se envie el correo*/
                 try {
                     var x = new email();

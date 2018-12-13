@@ -1,6 +1,6 @@
 const controlador = require('../controlador');
 const modeloViaje = require('../../Models/viajeModel');
-
+const mv = require('../../Models/viajeModelo');
 class controladorViaje extends controlador {
     constructor(res, req, next) {
         super(res, req, next);
@@ -40,8 +40,7 @@ class controladorViaje extends controlador {
                 ruta: imagen
             }
             /*Preparamos la subida a la base de datos*/
-            var modelo = new modeloViaje();
-            let resultado = await modelo.insert(ruta);
+            let resultado = await mv.create(ruta);
             this.res.redirect('/panelcontrol');
         } catch (e) {
             console.log('Error al realizar la peticion -> ' + e);
@@ -53,8 +52,7 @@ class controladorViaje extends controlador {
         console.log('entro a la funcion');
         let idviaje = this.req.body.id;
         try {
-            let modelo = new modeloViaje();
-            var respuesta = await modelo.borrarViaje(idviaje);
+            var respuesta = await mv.destroy({ where: { id: idviaje } });
             this.req.flash.borrado = 'Viaje borrado correctamente';
             this.res.redirect('/panelcontrol');
         } catch (e) {
