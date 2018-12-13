@@ -1,14 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\connection",
+    "\\controlador",
     "\\controlador\\administrador",
     "\\controlador\\auth",
-    "\\public",
-    "\\public\\javascripts",
+    "\\Models",
     "\\public\\stylesheets",
-    "\\views",
-    "\\views\\partials"
+    "\\routes",
+    "\\servicios",
+    "\\views"
   ],
-  "SelectedNode": "\\controlador",
+  "SelectedNode": "\\controlador\\auth\\logeoControlador.js",
   "PreviewInSolutionExplorer": false
 }
