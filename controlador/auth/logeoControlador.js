@@ -34,6 +34,7 @@ class loginControlador extends controlador {
                 //#Comprobamos contraseña.
                 if (encriptador.comparePass(Ipass, respuesta.password)) {
                     this.req.session.username = respuesta.usuario;
+                    this.req.session.carrito = [];
                     this.res.redirect('/');
                 } else {
                     this.req.flash.passfail = 'El password es incorrecto';
