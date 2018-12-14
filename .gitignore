@@ -1,4 +1,11 @@
-.vs/VSWorkspaceState.json
-.vs/agencia/v15/.suo
-.vs/slnx.sqlite
-.vs/slnx.sqlite-journal
+node_modules/
+
+public/vendors/
+
+package-lock.json
+
+.idea/
+
+*.log
+
+.vagrant/

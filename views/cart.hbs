@@ -1,10 +1,11 @@
-<div class="row" style="background-color:darkgray;padding-top:25vh;">
+<div class="row" style="background-color:darkgray;padding-top:20vh;">
     <style>
         .item {
             margin: 3vh 0vh;
             min-height: 10vh;
             background-color: white;
         }
+
         .item-list {
             background-color: white;
             padding-top: 5vh;
@@ -17,23 +18,25 @@
                 <hr />
             </div>
         </div>
-        
-        <div class="row item">
-            <div class="col-3 d-flex justify-content-center" style="">
-                <div>
-                    <h4>IMAGEN</h4>
+        {{#if viajes.length}}
+            {{#each viajes}}
+                <div class="row item">
+                    <div class="col-3 d-flex justify-content-center" style="">
+                        <div style="background-color:red;width:60%;border:1px solid #000">
+                            <img src="img/{{ruta}}" style="width:100%" class="img-responsive" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <h4>{{viaje}}</h4>
+                            <p>{{descripcion}}</p>
+                            <h3>{{precio}}$</h3>
+                            <p><a href="#">Eliminar</a></p>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <div>
-                    <h4>TITULO DEL DESTINO</h4>
-                    <p>Disponibilidad</p>
-                    <p><a href="#">Eliminar</a></p>
-
-                </div>
-            </div>
-        </div>
-
-
+            {{/each}}
+        {{/if}}
     </div>
 </div>

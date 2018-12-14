@@ -87,7 +87,8 @@ router.post('/panelcontrol', function (req, res, next) {
 //Ver pagina de carrito.
 
 router.get('/cart', function (req, res, next) {
-    res.render('cart');
+    var control = new controladorCarrito(res, req, next);
+    control.index();
 });
 
 //Añadir Viaje al carrito.
