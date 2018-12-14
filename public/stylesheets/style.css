@@ -1,6 +1,7 @@
 
 /*Ejecutados por jquery*/
 .full-page {
+    min-height:110vh;
 }
 
 .mitad-page {
@@ -182,6 +183,8 @@ header {
 /*Seccion de viajes*/
 .contenedor-viaje {
     min-height: 50vh;
+    margin-top:3vh;
+    padding-bottom:3vh;
 }
 
 .item-viaje {
@@ -200,8 +203,8 @@ header {
 
 #sec-destinos {
     
-    padding-bottom: 3vh;
-    min-height:100vh;
+    padding-bottom: 2vh;
+    min-height:110vh;
 }
 
 .viaje-descripcion {
@@ -587,4 +590,13 @@ header {
     min-width: 40vw;
     margin-top: 30vh;
     padding: 2vh;
+}
+/*----------Carrito de compra--------------*/
+.addViaje {
+    margin:0.5vh;
+    background-color: #e8e8e8;
+    border-radius: 114px 114px 114px 114px;
+    -moz-border-radius: 114px 114px 114px 114px;
+    -webkit-border-radius: 114px 114px 114px 114px;
+    border: 1px solid #e0a800;
 }

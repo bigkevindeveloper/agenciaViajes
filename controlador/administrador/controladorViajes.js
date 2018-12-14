@@ -1,5 +1,4 @@
 const controlador = require('../controlador');
-const modeloViaje = require('../../Models/viajeModel');
 const mv = require('../../Models/viajeModelo');
 class controladorViaje extends controlador {
     constructor(res, req, next) {

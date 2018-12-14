@@ -37,22 +37,33 @@
 </section>
 
 <section id="sec-destinos" class="viajes full-page">
-    <div class="container">
+    <div class="container" style="min-height:110vh;">
         <div class="row " style="min-height:100vh">
             <!-- SECCION DE VIAJES PARA DESKTOP -->
             <div class="col-md-12 d-none d-sm-block">
                 <div class="row">
                     <!-- En esta seccion se autogeneran los distintos viajes
-            cada columna correspondera a un viaje distinto, este por dentro contendra un div,
-            que estara centrado tanto horizontal como verticalmente. -->
+    cada columna correspondera a un viaje distinto, este por dentro contendra un div,
+    que estara centrado tanto horizontal como verticalmente. -->
+                    {{#if username}}
                     {{#if viajes.length}}
                     {{#each viajes}}
 
-                    <div class="col-md-4  contenedor-viaje d-flex justify-content-center">
+                    <div class="col-4   contenedor-viaje d-flex justify-content-center">
                         <div class="item-viaje my-auto">
                             <div class="row correccion">
                                 <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title">{{viaje}}</h5></div>
                             </div>
+                            <!--Seccion destinada a añadir al carrito de compra-->
+
+                            <div class="row addViaje" style="position:absolute;width:30%">
+                                <div id="{{id}}" class="col-12 d-flex justify-content-center">
+                                    <a href="/addcart/{{id}}"> <img src="img/carrito.png" alt="Alternate Text" /> </a>
+                                </div>
+                            </div>
+
+
+
                             <img src="img/{{ruta}}" class="img-responsive" alt="">
                             <div class="row viaje-descripcion">
                                 <div class="col-md-8 my-auto vd">
@@ -64,6 +75,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
@@ -71,6 +83,40 @@
                     {{else}}
                     <p>No existen viajes</p>
                     {{/if}}
+                    {{/if}}
+
+                    {{#unless username}}
+                    {{#if viajes.length}}
+                    {{#each viajes}}
+
+                    <div class="col-4   contenedor-viaje d-flex justify-content-center">
+                        <div class="item-viaje my-auto">
+                            <div class="row correccion">
+                                <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title">{{viaje}}</h5></div>
+                            </div>
+                            <!--Seccion destinada a añadir al carrito de compra-->
+
+                            <img src="img/{{ruta}}" class="img-responsive" alt="">
+                            <div class="row viaje-descripcion">
+                                <div class="col-md-8 my-auto vd">
+                                    <h6 class="f-blanco">{{descripcion}}</h6>
+                                </div>
+                                <div class="col-md-4 bg-yellow">
+                                    <div class="vp my-auto">
+                                        <p class="f-blanco text-center">{{precio}}$</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {{/each}}
+                    {{else}}
+                    <p>No existen viajes</p>
+                    {{/if}}
+                    {{/unless}}
+
                     <!--*****************GENERACION DE VIAJES************************-->
 
                 </div>
