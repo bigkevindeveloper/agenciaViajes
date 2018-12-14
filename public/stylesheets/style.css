@@ -70,7 +70,6 @@
     margin-left: auto;
 }
 
-/*=========================KEVIN RIVERA=================================*/
 .main {
     background: url("../images/header.jpg") center center no-repeat;
     -webkit-background-size: cover;
@@ -92,24 +91,25 @@ header {
     padding-left: 0px;
     padding-right: 0px;
     margin-right: 0px;
-   
+
 }
 
 .bartop {
-    color:white;
-    text-align:right;
-    text-decoration:none;
+    color: white;
+    text-align: right;
+    text-decoration: none;
 }
-    .bartop:hover {
-        transition: 1s;
-        color: #202557;
-    }
+
+.bartop:hover {
+    transition: 1s;
+    color: #202557;
+}
 
 .menu-fixed {
     background-color: rgba(0, 0, 0, 0.9);
-    -webkit-box-shadow: 1px 5px 5px -2px rgba(255,255,255,1);
-    -moz-box-shadow: 1px 5px 5px -2px rgba(255,255,255,1);
-    box-shadow: 1px 5px 5px -2px rgba(255,255,255,1);
+    -webkit-box-shadow: 1px 5px 5px -2px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 1px 5px 5px -2px rgba(255, 255, 255, 1);
+    box-shadow: 1px 5px 5px -2px rgba(255, 255, 255, 1);
 }
 
 .cont-logo {
@@ -127,6 +127,7 @@ header {
 .logo-container {
     padding-top: 1.3vh;
 }
+
 /*Menu desplegable*/
 .menu-desplegado {
     padding-left: 0px;
@@ -136,21 +137,22 @@ header {
     right: 0;
     top: 15vh;
     /*Opcionalmente tenemos dos opciones que el menu ocupe el alto completo de la pantalla o una parte parcial de el*/
-    -webkit-box-shadow: -3px 4px 5px -2px rgba(255,255,255,1);
-    -moz-box-shadow: -3px 4px 5px -2px rgba(255,255,255,1);
-    box-shadow: -3px 4px 5px -2px rgba(255,255,255,1);
+    -webkit-box-shadow: -3px 4px 5px -2px rgba(255, 255, 255, 1);
+    -moz-box-shadow: -3px 4px 5px -2px rgba(255, 255, 255, 1);
+    box-shadow: -3px 4px 5px -2px rgba(255, 255, 255, 1);
 }
 
-    .menu-desplegado ul {
-        list-style: none;
-        padding-left: 2vh;
-    }
+.menu-desplegado ul {
+    list-style: none;
+    padding-left: 2vh;
+}
 
-    .menu-desplegado li {
-        padding-top: 5vh;
-        padding-bottom: 5vh;
-        text-align: center;
-    }
+.menu-desplegado li {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+}
+
 /**/
 .iconoweb {
     width: 18vh;
@@ -186,16 +188,18 @@ header {
 
 .item-viaje {
 }
+
 .correccion {
     margin-left: 0px;
     margin-right: 0px;
 }
 
-    .item-viaje img {
-        width: 100%;
-        height: 80%;
-    }
+.item-viaje img {
+    width: 100%;
+    height: 80%;
+}
 
+/*Sección destinos*/
 #sec-destinos {
 }
 
@@ -209,10 +213,12 @@ header {
 .vp {
     padding-top: 2vh;
 }
+
 /*Responsive*/
 .pad0 {
     padding: 0
 }
+
 /*imagenes responsivas*/
 .m-carousel {
     padding-top: 4vh;
@@ -278,87 +284,17 @@ header {
     margin: 0;
 }
 
-    .title-hover:hover {
-        transition: 2s ease;
-        opacity: 1;
-        background-color: rgba(0, 0, 0, 0.7);
-    }
+.title-hover:hover {
+    transition: 2s ease;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
 .content-title {
     padding: 0;
 }
 
-
-
-
-/*=========================FIN KEVIN RIVERA=================================*/
-
-/*=========================PABLO ADRIAENSENS=================================*/
-
-/*Secci�n Contact*/
-.contact-row {
-    padding: 2vh 0 0 0;
-}
-
-.separador-contact {
-    padding: 0;
-    width: 25px;
-}
-
-.hr-contact {
-    background-color: #689AFE;
-    height: 0.2vh;
-    margin: 0 0 40px 0;
-}
-
-/*div Mapa*/
-.contenedor-mapa {
-    min-height: 70vh;
-    padding-left: 9vh;
-}
-
-.my-map {
-    width: 90%;
-    height: 95%;
-}
-
-/*div Formulario*/
-.contenedor-formulario {
-    min-height: 70vh;
-}
-
-.my-formulario {
-    width: 80%;
-    height: 80%;
-}
-
-.form-left {
-    padding: 0 10px 0 0;
-}
-
-.form-right {
-    padding: 0 0 0 10px;
-}
-
-.contact-fields {
-    padding: 0;
-}
-
-.form-condition {
-    padding: 0.5em 0 0 0;
-    font-size: 0.8em;
-}
-
-.btnform {
-    margin-top: 3vh;
-    font-size: 1.9vw;
-    color: black;
-}
-
 /*Secci�n Footer*/
-
-
-
 #sec-footer {
     background-color: #141939;
 }
@@ -379,11 +315,6 @@ header {
 .hr-footer {
     background-color: #000000;
     height: 0.1vh;
-    margin: 0 0 40px 0;
-}
-
-.foot-rights {
-    padding: 1vh 0 5vh 0;
 }
 
 /*=========================FIN PABLO ADRIAENSENS=================================*/

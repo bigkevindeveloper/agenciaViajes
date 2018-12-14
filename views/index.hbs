@@ -260,79 +260,57 @@
 </section>
 
 
-<section id="sec-contacto" class="d-none d-sm-block contact full-page">
-    <div class="">
-        <div class="row contact-row my-auto">
-            <!-- En esta seccion dispondremos del mapa con la ubicaci�n de la empresa, informaci�n de su horario
-            y el formulario a rellenar para contarctar con dicha empresa -->
-            <!-- ************* MAPA ************* -->
-            <div class="col-md-6  contenedor-mapa d-flex justify-content-end">
-                <div class="col-md-10  d-flex justify-content-end my-map my-auto">
-                    <iframe class="my-map my-auto"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.450235040021!2d-0.35812868463229974!3d39.48174697948477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604898947abad3%3A0x5aae0e0b7fa0358a!2sGeeksHubs+Space+Valencia!5e0!3m2!1ses!2ses!4v1542038355935"
-                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-            </div>
+<section id="sec-contacto" class="row middel-content justify-content-center d-none mt-5 mb-5 d-md-flex">
 
-            <!-- ********** FORMULARIO*********** -->
-            <div class=" col-md-6  contenedor-formulario d-flex justify-content-left">
-                <div class="my-formulario my-auto">
-                    <p>E: enquiry@artiotravel.com<br>P: 0264 123 4567</p>
-                    <p>
-                        Llamenos o visitenos en cualquier momento, nos esforzamos por responder a todos
-                        Consultas dentro de las 24 horas del dia habil.
-                    </p>
-                    <p>Abrimos de 8.30 AM - 4.00 PM todos los dias de la semana.</p>
 
-                    <!-- Separador azul -->
-                    <div class="col-1 separador-contact">
-                        <hr class="hr-contact"/>
+    <!-- En esta seccion dispondremos del mapa con la ubicaci�n de la empresa, informaci�n de su horario
+    y el formulario a rellenar para contarctar con dicha empresa -->
+    <!-- ************* MAPA ************* -->
+    <div class="col-sm-12 col-md-5 mt-4 mb-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.4502350400253!2d-0.3581286849401149!3d39.48174697948466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604898947abad3%3A0x5aae0e0b7fa0358a!2sGeeksHubs+Space+Valencia!5e0!3m2!1ses-419!2ses!4v1542142222026"
+                frameborder="0" width="100%" height="100%" style="border:0"></iframe>
+    </div>
+
+    <!-- ********** FORMULARIO*********** -->
+    <div class="col-sm-12 col-md-6 mt-2">
+        <div class="row justify-content-center">
+            <div class="col-12">
+
+                <p> E: email@dominio.com <br>
+                    P: 648328828282 <br> <br>
+                    Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on
+                    business day.
+                    <br>
+                    we are open from 8:30am - 4:00 PM week days.
+                </p>
+                <!-- Separador azul -->
+                <hr/>
+
+                <form>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-4">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <input type="text" class="form-control" placeholder="Email">
+                        </div>
                     </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-4">
+                            <input type="text" class="form-control" placeholder="Phone">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Country">
+                        </div>
+                    </div>
+                    <textarea class="form-control mb-4" id="Textarea" placeholder="Message" rows="3"></textarea>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-warning mb-2">Enviar mensaje</button>
+                    </div>
+                </form>
 
-                    <form class="form-management" action="">
-
-                        <div class="form-group">
-                            <div class="contact-fields col-md-12">
-                                <div class="row">
-                                    <div class="form-left col-md-6">
-                                        <input type="text" class="form-control" id="name"
-                                               placeholder="Name*">
-                                    </div>
-                                    <div class="form-right col-md-6">
-                                        <input type="email" class="form-control" id="email"
-                                               aria-describedby="emailHelp"
-                                               placeholder="Email*">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="contact-fields col-md-12">
-                                <div class="row">
-                                    <div class="form-left col-md-6">
-                                        <input type="number" class="form-control" id="phone"
-                                               placeholder="Phone">
-                                    </div>
-                                    <div class="form-right col-md-6">
-                                        <input type="text" class="form-control" id="country"
-                                               placeholder="Country">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group-message">
-                            <textarea class="form-control" id="message" placeholder="Message" rows="5"></textarea>
-                        </div>
-                        <div class="form-condition col-md-12">
-                            <span>* PLEASE COMPLETE ALL FIELDS CORRECTLY</span>
-                        </div>
-                        <button type="submit" class="btn btn-warning btnform">Enviar mensaje</button>
-                    </form>
-                </div>
             </div>
-
         </div>
     </div>
 </section>
-
 
