@@ -49,7 +49,7 @@
 }
 
 /*======FIN========*/
-/*FUENTE TAMAÑO*/
+/*FUENTE TAMAï¿½O*/
 .fuente-grande {
     font-size: 4vw
 }
@@ -58,7 +58,7 @@
     font-size: 5vh
 }
 
-.fuente-pequeña {
+.fuente-pequeï¿½a {
     font-weight: 1vw
 }
 
@@ -182,14 +182,9 @@ header {
 
 /*Seccion de viajes*/
 .contenedor-viaje {
-    min-height: 50vh;
-    margin-top:3vh;
-    padding-bottom:3vh;
 }
 
 .item-viaje {
-    height: 40vh;
-    width: 20vw;
 }
 .correccion {
     margin-left: 0px;
@@ -202,9 +197,6 @@ header {
     }
 
 #sec-destinos {
-    
-    padding-bottom: 2vh;
-    min-height:110vh;
 }
 
 .viaje-descripcion {
@@ -223,7 +215,7 @@ header {
 }
 /*imagenes responsivas*/
 .m-carousel {
-    padding-top: 8vh;
+    padding-top: 4vh;
 }
 
 .mv-title {
@@ -303,7 +295,7 @@ header {
 
 /*=========================PABLO ADRIAENSENS=================================*/
 
-/*Sección Contact*/
+/*Secciï¿½n Contact*/
 .contact-row {
     padding: 2vh 0 0 0;
 }
@@ -363,7 +355,7 @@ header {
     color: black;
 }
 
-/*Sección Footer*/
+/*Secciï¿½n Footer*/
 
 
 
@@ -538,7 +530,7 @@ header {
     color:black;
 }
 
-/*====== Área administración ========*/
+/*====== ï¿½rea administraciï¿½n ========*/
 .administracion{
     background-color: powderblue;
     padding-bottom:4vh;

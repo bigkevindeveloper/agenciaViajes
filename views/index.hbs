@@ -36,9 +36,9 @@
     </div>
 </section>
 
-<section id="sec-destinos" class="viajes full-page">
-    <div class="container" style="min-height:110vh;">
-        <div class="row " style="min-height:100vh">
+<section id="sec-destinos" class="viajes mb-5">
+    <div class="container">
+        <div class="row ">
             <!-- SECCION DE VIAJES PARA DESKTOP -->
             <div class="col-md-12 d-none d-sm-block">
                 <div class="row">
@@ -46,75 +46,76 @@
     cada columna correspondera a un viaje distinto, este por dentro contendra un div,
     que estara centrado tanto horizontal como verticalmente. -->
                     {{#if username}}
-                    {{#if viajes.length}}
-                    {{#each viajes}}
+                        {{#if viajes.length}}
+                            {{#each viajes}}
+                                <div class="col-md-4 mt-5 mb-5 contenedor-viaje d-flex justify-content-center">
+                                    <div class="item-viaje">
+                                        <div class="row correccion">
+                                            <div class="col-12 bg-blue"><h5
+                                                    class="text-center f-blanco font-title">{{viaje}}</h5></div>
+                                        </div>
+                                        <!--Seccion destinada a aï¿½adir al carrito de compra-->
 
-                    <div class="col-4   contenedor-viaje d-flex justify-content-center">
-                        <div class="item-viaje my-auto">
-                            <div class="row correccion">
-                                <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title">{{viaje}}</h5></div>
-                            </div>
-                            <!--Seccion destinada a añadir al carrito de compra-->
-
-                            <div class="row addViaje" style="position:absolute;width:30%">
-                                <div id="{{id}}" class="col-12 d-flex justify-content-center">
-                                    <a href="/addcart/{{id}}"> <img src="img/carrito.png" alt="Alternate Text" /> </a>
-                                </div>
-                            </div>
+                                        <div class="row addViaje" style="position:absolute;width:30%">
+                                            <div id="{{id}}" class="col-12 d-flex justify-content-center">
+                                                <a href="/addcart/{{id}}"> <img src="img/carrito.png"
+                                                                                alt="Alternate Text"/> </a>
+                                            </div>
+                                        </div>
 
 
+                                        <img src="img/{{ruta}}" class="img-responsive" alt="">
+                                        <div class="row viaje-descripcion">
+                                            <div class="col-md-8 my-auto vd">
+                                                <h6 class="f-blanco">{{descripcion}}</h6>
+                                            </div>
+                                            <div class="col-md-4 bg-yellow">
+                                                <div class="vp my-auto">
+                                                    <p class="f-blanco text-center">{{precio}}$</p>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                            <img src="img/{{ruta}}" class="img-responsive" alt="">
-                            <div class="row viaje-descripcion">
-                                <div class="col-md-8 my-auto vd">
-                                    <h6 class="f-blanco">{{descripcion}}</h6>
-                                </div>
-                                <div class="col-md-4 bg-yellow">
-                                    <div class="vp my-auto">
-                                        <p class="f-blanco text-center">{{precio}}$</p>
                                     </div>
                                 </div>
-                            </div>
 
-                        </div>
-                    </div>
-
-                    {{/each}}
-                    {{else}}
-                    <p>No existen viajes</p>
-                    {{/if}}
+                            {{/each}}
+                        {{else}}
+                            <p>No existen viajes</p>
+                        {{/if}}
                     {{/if}}
 
                     {{#unless username}}
-                    {{#if viajes.length}}
-                    {{#each viajes}}
+                        {{#if viajes.length}}
+                            {{#each viajes}}
 
-                    <div class="col-4   contenedor-viaje d-flex justify-content-center">
-                        <div class="item-viaje my-auto">
-                            <div class="row correccion">
-                                <div class="col-12 bg-blue"><h5 class="text-center f-blanco font-title">{{viaje}}</h5></div>
-                            </div>
-                            <!--Seccion destinada a añadir al carrito de compra-->
+                                <div class="col-md-4 mt-5 mb-5 contenedor-viaje d-flex justify-content-center">
+                                    <div class="item-viaje">
+                                        <div class="row correccion">
+                                            <div class="col-12 bg-blue"><h5
+                                                    class="text-center f-blanco font-title">{{viaje}}</h5></div>
+                                        </div>
+                                        <!--Seccion destinada a aï¿½adir al carrito de compra-->
 
-                            <img src="img/{{ruta}}" class="img-responsive" alt="">
-                            <div class="row viaje-descripcion">
-                                <div class="col-md-8 my-auto vd">
-                                    <h6 class="f-blanco">{{descripcion}}</h6>
-                                </div>
-                                <div class="col-md-4 bg-yellow">
-                                    <div class="vp my-auto">
-                                        <p class="f-blanco text-center">{{precio}}$</p>
+                                        <img src="img/{{ruta}}" class="img-responsive" alt="">
+                                        <div class="row viaje-descripcion">
+                                            <div class="col-md-8 my-auto vd">
+                                                <h6 class="f-blanco">{{descripcion}}</h6>
+                                            </div>
+                                            <div class="col-md-4 bg-yellow">
+                                                <div class="vp my-auto">
+                                                    <p class="f-blanco text-center">{{precio}}$</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
-                            </div>
 
-                        </div>
-                    </div>
-
-                    {{/each}}
-                    {{else}}
-                    <p>No existen viajes</p>
-                    {{/if}}
+                            {{/each}}
+                        {{else}}
+                            <p>No existen viajes</p>
+                        {{/if}}
                     {{/unless}}
 
                     <!--*****************GENERACION DE VIAJES************************-->
@@ -122,47 +123,60 @@
                 </div>
             </div>
             <!--SECCION DE VIAJES PARA MOVIL-->
-            <div class="col-12 my-auto  d-block d-sm-none m-carousel">
+            <div class="col-12 d-block d-sm-none m-carousel">
                 <!-- Carousel -->
-                <div id="carouselExampleControls" style="min-height:80vh" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleControls" class="carousel slide d-block d-md-none p-4" data-ride="carousel">
+                    <div class="carousel-inner p-4">
                     <div class="carousel-inner">
                         {{#if viajes.length}}
                             {{#each viajes}}
-                            <!-- Al primer objeto de los viajes le pasamos un parametro especifico-->
+                                <!-- Al primer objeto de los viajes le pasamos un parametro especifico-->
                                 {{#if @first}}
-                                <div class="carousel-item active">
-                                    <!--  Box correspondiente a cada destino -->
-                                    <div class="row">
-                                        <div class="col-12 bg-blue mv-title"> <h3 class="text-center f-blanco">{{viaje}}</h3></div><!--Titulo destino-->
-                                        <div class="col-12 pad0"><img src="img/{{ruta}}" class="img-responsive" alt="Alternate Text" /></div><!--Imagen del destino-->
-                                        <!-- Descripcion y precio del destino-->
-                                        <div class="col-12 mv-txt pad0">
-                                            <div class="row">
-                                                <div class="col-8 mv-des"><h5 class="f-blanco">{{descripcion}}</h5></div>
-                                                <div class="col-4 mv-price"><h4 class="f-blanco text-center">{{precio}}$</h4></div>
-                                            </div>
-                                        </div>
 
+                                    <div class="carousel-item active">
+                                        <!--  Box correspondiente a cada destino -->
+                                        <div class="row">
+                                            <div class="col-12 bg-blue mv-title"><h3
+                                                    class="text-center f-blanco">{{viaje}}</h3></div>
+                                            <!--Titulo destino-->
+                                            <div class="col-12 pad0"><img src="img/{{ruta}}" class="w-100 h-100"
+                                                                          alt="Alternate Text"/></div>
+                                            <!--Imagen del destino-->
+                                            <!-- Descripcion y precio del destino-->
+                                            <div class="col-12 mv-txt pad0">
+                                                <div class="row">
+                                                    <div class="col-8 mv-des"><h5 class="f-blanco">{{descripcion}}</h5>
+                                                    </div>
+                                                    <div class="col-4 mv-price"><h4
+                                                            class="f-blanco text-center">{{precio}}$</h4></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                </div>
                                 {{/if}}
                                 <div class="carousel-item ">
                                     <!--  Box correspondiente a cada destino -->
                                     <div class="row">
-                                        <div class="col-12 bg-blue mv-title"> <h3 class="text-center f-blanco">{{viaje}}</h3></div><!--Titulo destino-->
-                                        <div class="col-12 pad0"><img src="img/{{ruta}}" class="img-responsive" alt="Alternate Text" /></div><!--Imagen del destino-->
+                                        <div class="col-12 bg-blue mv-title"><h3
+                                                class="text-center f-blanco">{{viaje}}</h3></div><!--Titulo destino-->
+                                        <div class="col-12 pad0"><img src="img/{{ruta}}" class="w-100 h-100"
+                                                                      alt="Alternate Text"/></div>
+                                        <!--Imagen del destino-->
                                         <!-- Descripcion y precio del destino-->
                                         <div class="col-12 mv-txt pad0">
                                             <div class="row">
-                                                <div class="col-8 mv-des"><h5 class="f-blanco">{{descripcion}}</h5></div>
-                                                <div class="col-4 mv-price"><h4 class="f-blanco text-center">{{precio}}$</h4></div>
+                                                <div class="col-8 mv-des"><h5 class="f-blanco">{{descripcion}}</h5>
+                                                </div>
+                                                <div class="col-4 mv-price"><h4 class="f-blanco text-center">{{precio}}
+                                                    $</h4></div>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
                             {{/each}}
-                        {{/if}}                      
+                        {{/if}}
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -172,10 +186,11 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    </div>
                 </div>
             </div>
-       
-    </div>
+
+        </div>
 
 
     </div>
@@ -183,7 +198,7 @@
 
 <section id="qss" class="sec-quienessomos">
     <!--  Modificar con jquery-->
-    <!-- Visible en todos menos en dispositivos pequeños-->
+    <!-- Visible en todos menos en dispositivos pequeï¿½os-->
     <div class="row full-page  d-none d-sm-block">
         <div class="col-12 full-page my-auto">
             <!--El div tendra una imagen como fondo-->
@@ -194,21 +209,25 @@
                             <div class="col-12"><h3>QUIENES SOMOS</h3></div>
                             <div class="col-12">
                                 <p>
-                                    GeekHubs Travels es una agencia de viajes online creada en 2009 por un equipo de viajeros
+                                    GeekHubs Travels es una agencia de viajes online creada en 2009 por un equipo de
+                                    viajeros
                                     entusiastas que deciden hacer de su pasion por conocer el mundo un modo de vida.
                                     Desde nuestros inicios hemos planeado mas de 500 viajes organizados a diferentes
-                                    destinos de Europa, Norteamerica y Asia.Nuestro objetivo ahora es ir ampliando horizontes
+                                    destinos de Europa, Norteamerica y Asia.Nuestro objetivo ahora es ir ampliando
+                                    horizontes
                                     poco a poco.
                                 </p>
                             </div>
-                            <div class="col-12 d-flex justify-content-center"><button type="button" class="btn btn-warning  ">Ver destinos</button></div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <button type="button" class="btn btn-warning  ">Ver destinos</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Visible solo en dispositivos pequeños -->
+    <!-- Visible solo en dispositivos pequeï¿½os -->
     <div class="row  d-block d-sm-none">
         <div class="col-12 ">
             <!--El div tendra una imagen como fondo-->
@@ -219,14 +238,18 @@
                             <div class="col-12"><h3>QUIENES SOMOS</h3></div>
                             <div class="col-12">
                                 <p>
-                                    GeekHubs Travels es una agencia de viajes online creada en 2009 por un equipo de viajeros
-                                    entusiastas que deciden hacer de su pasión por conocer el mundo un modo de vida.
+                                    GeekHubs Travels es una agencia de viajes online creada en 2009 por un equipo de
+                                    viajeros
+                                    entusiastas que deciden hacer de su pasiï¿½n por conocer el mundo un modo de vida.
                                     Desde nuestros inicios hemos creado mas de 500 viajes organizados a diferentes
-                                    destinos de Europa, Norteamérica y Asia.Nuestro objetivo ahora es ir ampliando horizontes
+                                    destinos de Europa, Norteamï¿½rica y Asia.Nuestro objetivo ahora es ir ampliando
+                                    horizontes
                                     poco a poco.
                                 </p>
                             </div>
-                            <div class="col-12 d-flex justify-content-center"><button type="button" class="btn btn-warning  ">Ver destinos</button></div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <button type="button" class="btn btn-warning  ">Ver destinos</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -240,7 +263,7 @@
 <section id="sec-contacto" class="d-none d-sm-block contact full-page">
     <div class="">
         <div class="row contact-row my-auto">
-            <!-- En esta seccion dispondremos del mapa con la ubicación de la empresa, información de su horario
+            <!-- En esta seccion dispondremos del mapa con la ubicaciï¿½n de la empresa, informaciï¿½n de su horario
             y el formulario a rellenar para contarctar con dicha empresa -->
             <!-- ************* MAPA ************* -->
             <div class="col-md-6  contenedor-mapa d-flex justify-content-end">
@@ -259,11 +282,11 @@
                         Llamenos o visitenos en cualquier momento, nos esforzamos por responder a todos
                         Consultas dentro de las 24 horas del dia habil.
                     </p>
-                    <p>Abrimos de  8.30 AM - 4.00 PM todos los dias de la semana.</p>
+                    <p>Abrimos de 8.30 AM - 4.00 PM todos los dias de la semana.</p>
 
                     <!-- Separador azul -->
                     <div class="col-1 separador-contact">
-                        <hr class="hr-contact" />
+                        <hr class="hr-contact"/>
                     </div>
 
                     <form class="form-management" action="">
