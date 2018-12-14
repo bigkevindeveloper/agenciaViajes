@@ -1,11 +1,6 @@
 node_modules/
-
 public/vendors/
-
 package-lock.json
-
 .idea/
-
 *.log
-
 .vagrant/
