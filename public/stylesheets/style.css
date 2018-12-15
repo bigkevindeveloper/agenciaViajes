@@ -21,10 +21,6 @@
     color: #e0a800
 }
 
-.bg-yellow {
-    background-color: #e0a800
-}
-
 .f-blue {
     color: #202557
 }
@@ -36,6 +32,10 @@
 /*Color azul general de toda la pagina*/
 .bg-blue {
     background-color: #202557
+}
+
+.bg-yellow {
+    background-color: #e0a800
 }
 
 /*======FIN======*/
@@ -247,11 +247,21 @@ header {
 }
 
 /*Quienes somos*/
-.sec-quienessomos {
-    background: url("../images/quienessomos.jpg") center center no-repeat;
-    -webkit-background-size: cover;
+.sec-quienessomos {background: url("../images/quienessomos.jpg") center center no-repeat;
     background-size: cover;
-    padding: 2vh;
+    background-position: center;
+    padding: 10%
+}
+
+.jumbotron {
+    margin-bottom: 0vw;
+    background-color: rgba(248, 248, 255, 0.62);
+}
+
+/*Línea amarilla bajo el texto*/
+.underlinedSpan {
+    height: 0.2rem;
+    width: 13.7em;
 }
 
 .sec-quienessomosmovil {
