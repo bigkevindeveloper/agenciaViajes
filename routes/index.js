@@ -98,6 +98,11 @@ router.get('/addcart/:id', function (req, res, next) {
     control.agregarProducto();
 });
 
+router.post('/addcart/:idviaje', function (req, res, next) {
+    let control = new controladorCarrito(res, req, next);
+    control.modificarPasajeros();
+});
+
 
 
 
