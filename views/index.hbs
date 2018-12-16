@@ -1,4 +1,5 @@
 <section id="sec-inicio" class="main full-page">
+    
     <!-- Esta seccion del container contendra el header(menu)-> Con el logo, el menu y la seccion de social -->
     <div class="row header2 ">
         <div class="col-md-4"></div>
@@ -42,80 +43,94 @@
             <!-- SECCION DE VIAJES PARA DESKTOP -->
             <div class="col-md-12 d-none d-sm-block">
                 <div class="row">
+                    {{#if username}}
+                    <div  class="d-none d-sm-block boton-carrito d-flex justify-content-center d-none d-md-block " >
+                        <a href="/cart"><img  src="img/carrito.png" alt="Alternate Text" /></a>
+                    </div>
+                    {{/if}}
+                   
                     <!-- En esta seccion se autogeneran los distintos viajes
     cada columna correspondera a un viaje distinto, este por dentro contendra un div,
     que estara centrado tanto horizontal como verticalmente. -->
                     {{#if username}}
-                        {{#if viajes.length}}
-                            {{#each viajes}}
-                                <div class="col-md-4 mt-5 mb-5 contenedor-viaje d-flex justify-content-center">
-                                    <div class="item-viaje">
-                                        <div class="row correccion">
-                                            <div class="col-12 bg-blue"><h5
-                                                    class="text-center f-blanco font-title">{{viaje}}</h5></div>
-                                        </div>
-                                        <!--Seccion destinada a a�adir al carrito de compra-->
+                    {{#if viajes.length}}
+                    {{#each viajes}}
+                    <div class="col-md-4 mt-5 mb-5 contenedor-viaje d-flex justify-content-center">
+                        <div class="item-viaje">
+                            <div class="row correccion">
+                                <div class="col-12 bg-blue">
+                                    <h5 class="text-center f-blanco font-title">
+                                        {{viaje}}
+                                    </h5>
+                                </div>
+                            </div>
+                            <!--Seccion destinada a a�adir al carrito de compra-->
 
-                                        <div class="row addViaje" style="position:absolute;width:30%">
-                                            <div id="{{id}}" class="col-12 d-flex justify-content-center">
-                                                <a href="/addcart/{{id}}"> <img src="img/carrito.png"
-                                                                                alt="Alternate Text"/> </a>
-                                            </div>
-                                        </div>
+                            <div class="row addViaje" style="position:absolute;width:30%">
+                                <div id="{{id}}" class="col-12 d-flex justify-content-center">
+                                    <a href="/addcart/{{id}}">
+                                        <img src="img/carrito.png"
+                                             alt="Alternate Text" />
+                                    </a>
+                                </div>
+                            </div>
 
 
-                                        <img src="img/{{ruta}}" class="img-responsive" alt="">
-                                        <div class="row viaje-descripcion">
-                                            <div class="col-md-8 my-auto vd">
-                                                <h6 class="f-blanco">{{descripcion}}</h6>
-                                            </div>
-                                            <div class="col-md-4 bg-yellow">
-                                                <div class="vp my-auto">
-                                                    <p class="f-blanco text-center">{{precio}}$</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
+                            <img src="img/{{ruta}}" class="img-responsive" alt="">
+                            <div class="row viaje-descripcion">
+                                <div class="col-md-8 my-auto vd">
+                                    <h6 class="f-blanco">{{descripcion}}</h6>
+                                </div>
+                                <div class="col-md-4 bg-yellow">
+                                    <div class="vp my-auto">
+                                        <p class="f-blanco text-center">{{precio}}EUR</p>
                                     </div>
                                 </div>
+                            </div>
 
-                            {{/each}}
-                        {{else}}
-                            <p>No existen viajes</p>
-                        {{/if}}
+                        </div>
+                    </div>
+
+                    {{/each}}
+                    {{else}}
+                    <p>No existen viajes</p>
+                    {{/if}}
                     {{/if}}
 
                     {{#unless username}}
-                        {{#if viajes.length}}
-                            {{#each viajes}}
+                    {{#if viajes.length}}
+                    {{#each viajes}}
 
-                                <div class="col-md-4 mt-5 mb-5 contenedor-viaje d-flex justify-content-center">
-                                    <div class="item-viaje">
-                                        <div class="row correccion">
-                                            <div class="col-12 bg-blue"><h5
-                                                    class="text-center f-blanco font-title">{{viaje}}</h5></div>
-                                        </div>
-                                        <!--Seccion destinada a a�adir al carrito de compra-->
+                    <div class="col-md-4 mt-5 mb-5 contenedor-viaje d-flex justify-content-center">
+                        <div class="item-viaje">
+                            <div class="row correccion">
+                                <div class="col-12 bg-blue">
+                                    <h5 class="text-center f-blanco font-title">
+                                        {{viaje}}
+                                    </h5>
+                                </div>
+                            </div>
+                            <!--Seccion destinada a a�adir al carrito de compra-->
 
-                                        <img src="img/{{ruta}}" class="img-responsive" alt="">
-                                        <div class="row viaje-descripcion">
-                                            <div class="col-md-8 my-auto vd">
-                                                <h6 class="f-blanco">{{descripcion}}</h6>
-                                            </div>
-                                            <div class="col-md-4 bg-yellow">
-                                                <div class="vp my-auto">
-                                                    <p class="f-blanco text-center">{{precio}}$</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
+                            <img src="img/{{ruta}}" class="img-responsive" alt="">
+                            <div class="row viaje-descripcion">
+                                <div class="col-md-8 my-auto vd">
+                                    <h6 class="f-blanco">{{descripcion}}</h6>
+                                </div>
+                                <div class="col-md-4 bg-yellow">
+                                    <div class="vp my-auto">
+                                        <p class="f-blanco text-center">{{precio}}$</p>
                                     </div>
                                 </div>
+                            </div>
 
-                            {{/each}}
-                        {{else}}
-                            <p>No existen viajes</p>
-                        {{/if}}
+                        </div>
+                    </div>
+
+                    {{/each}}
+                    {{else}}
+                    <p>No existen viajes</p>
+                    {{/if}}
                     {{/unless}}
 
                     <!--*****************GENERACION DE VIAJES************************-->

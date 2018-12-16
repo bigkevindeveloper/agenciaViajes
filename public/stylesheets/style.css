@@ -533,3 +533,11 @@ header {
     -webkit-border-radius: 114px 114px 114px 114px;
     border: 1px solid #e0a800;
 }
+.boton-carrito {
+    position: fixed;
+    top: 45%;
+    right: 0%;
+    background-color: rgba(0,0,0,0.6);
+    min-width: 6vw;
+    min-height: 8vh
+}

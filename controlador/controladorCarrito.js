@@ -36,7 +36,7 @@ class controladorCarrito extends controlador {
         var totalFactura = factura.total;
         var productosFactura = factura.productos;
        
-        this.res.render('cart', { viajes: VIAJES, precio: totalFactura, productos: productosFactura });
+        this.res.render('cart', { viajes: VIAJES, precio: totalFactura, productos: productosFactura, username: this.req.session.username });
     }
 
     async modificarPasajeros() {
