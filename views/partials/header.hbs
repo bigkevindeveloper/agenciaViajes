@@ -3,7 +3,7 @@
     {{#if username}}
     <div class="row d-none d-sm-block">
         <div class="col-md-3 offset-md-9 d-flex justify-content-end" >
-            <p class="f-blanco">Bienvenido: <b>{{username}}</b> | <a class="f-blanco" style="text-decoration:none" href="/cerrarsesion"> <img src="img/close.png" alt="Cerrar sesion" /></a></p>
+            <p class="f-blanco">Bienvenido: <b>{{username}}</b> | <a class="f-blanco" href="/cerrarsesion"> <img src="img/close.png" alt="Cerrar sesion" /></a></p>
         </div>
     </div>
     {{else}}
@@ -57,7 +57,7 @@
                 {{#if username}}
                 <li><p class="text-center f-blanco">Hola: <b>{{username}} </b> | <a href="/cerrarsesion"> <img src="img/close.png"></img></a></p></li>
                 {{else}}
-                <li><a class="text-center f-blanco" href="/iniciarsesion" style="text-decoration:none">Iniciar Sesion</a></li>
+                <li><a class="text-center f-blanco" href="/iniciarsesion">Iniciar Sesion</a></li>
                 <li><a class="text-center f-blanco" href="/registrar">Registrarse</a></li>
                 {{/if}}
                 <li id="bb-inicio"><p class="f-blanco">Inicio</p></li>

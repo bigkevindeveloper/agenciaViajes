@@ -38,6 +38,11 @@
     background-color: #e0a800
 }
 
+/*===== LINKS =====*/
+a.f-blanco{
+    text-decoration: none;
+}
+
 /*======FIN======*/
 /*FUENTE WEIGHT*/
 .bold {
