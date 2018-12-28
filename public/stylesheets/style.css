@@ -56,15 +56,29 @@ a.f-blanco{
 /*======FIN========*/
 /*FUENTE TAMA�O*/
 .fuente-grande {
-    font-size: 4vw
+    font-size: 4vw;
 }
 
 .fuente-media {
-    font-size: 5vh
+    font-size: 5vh;
 }
 
 .fuente-peque�a {
-    font-weight: 1vw
+    font-weight: 1vw;
+}
+
+/*====REUTILIZABLES====*/
+.marginTop3{
+    margin-top:3vh;
+}
+.marginTop2{
+    margin-top:2vh;
+}
+.marginLeft1{
+    margin-left:1vh;
+}
+.bordeSimple{
+    border:1px solid #000;
 }
 
 /*=============*/
@@ -493,6 +507,16 @@ header {
 .Panel{
     padding-top:25vh;
 }
+
+#inputDescripcion{
+    width:80%;
+    height:10vh;
+}
+
+#btn-salirEliminar, #btn-salir{
+    cursor: pointer;
+}
+
 /*-------FORMULARIO DE SUBIDA--------*/
 .formularioSubida {
     background-color: red;
@@ -531,6 +555,8 @@ header {
 }
 /*----------Carrito de compra--------------*/
 .addViaje {
+    position:absolute;
+    width:30%;
     margin:0.5vh;
     background-color: #e8e8e8;
     border-radius: 114px 114px 114px 114px;

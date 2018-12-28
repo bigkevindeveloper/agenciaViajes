@@ -42,7 +42,7 @@
                 <!-- Descripcion -->
                 <div class="col-3"><p class="text-right"><b>Descripcion: </b></p></div>
                 <div class="col-9">
-                    <input style="width:80%;height:10vh;" type="text" name="descripcion" placeholder="Escribe una breve descripcion" maxlength="200" />
+                    <input type="text" name="descripcion" id="inputDescripcion" placeholder="Escribe una breve descripcion" maxlength="200" />
                 </div>
                 <!-- SUBIDA DE IMAGEN -->
                 <div class="col-3"><p class="text-right"><b>Imagen del viaje: </b></p></div>
@@ -52,7 +52,7 @@
                 </div>
                 
                 <!-- Boton de envio -->
-                <div style="margin-top:3vh;" class="col-12 d-flex justify-content-center">
+                <div class="marginTop3 col-12 d-flex justify-content-center">
                     <button type="submit" class="btn btn-success">SUBIR VIAJE</button>
                 </div>
             </form>
@@ -76,7 +76,7 @@
                 <div class="col-12 d-flex justify-content-center">
                     <input type="number" name="id" value="" placeholder="ID del viaje" />
                 </div>
-                <div class="col-12 d-flex justify-content-center" style="margin-top:2vh;">
+                <div class="col-12 d-flex justify-content-center marginTop2">
                     <button type="submit" class="btn btn-danger">Eliminar viaje</button>
                 </div>
             </form>
@@ -114,7 +114,7 @@
                                 <td>No fecha</td>
                                 <td colspan="2">{{descripcion}}</td>
                                 <td class="d-flex justify-content-center">
-                                    <img style="border:1px solid #000" width="20%" height="20%" src="img/{{ruta}}">
+                                    <img class="bordeSimple" width="20%" height="20%" src="img/{{ruta}}">
                                 </td>
                                 <td>{{precio}}</td>
                                 <td>{{estado}}</td>
@@ -134,7 +134,7 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
                 <a id="btn-subir" href="#"><button class="btn btn-primary">Agregar viaje</button></a>
-                <a id="btn-borrar" href="#" style="margin-left:1vh;"><button class="btn btn-danger">Borrar viaje</button></a>
+                <a id="btn-borrar" href="#" class="marginLeft1"><button class="btn btn-danger">Borrar viaje</button></a>
             </div>
         </div>
     </div>
