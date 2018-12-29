@@ -626,7 +626,17 @@ header {
         font-size: calc(0.6em + 0.6vw);
         transition: none;
     }
+    /*==== REGISTRO ====*/
+    .register{
+        position: static;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .input-size{
+        width: 95%;
+    }
 
+    /*==== CARRITO ====*/
     #cart h3{
         font-size: 1.3rem;
     }
