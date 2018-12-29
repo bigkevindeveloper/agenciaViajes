@@ -25,6 +25,14 @@
     color: #202557
 }
 
+.f-red{
+    color: red;
+}
+
+.f-dimgray{
+    color: dimgray;
+}
+
 .font-title {
     font-family: 'Luckiest Guy', cursive;
 }
@@ -37,7 +45,9 @@
 .bg-yellow {
     background-color: #e0a800
 }
-
+.bg-darkgray{
+    background-color: darkgray;
+}
 /*===== LINKS =====*/
 a.f-blanco{
     text-decoration: none;
@@ -77,8 +87,20 @@ a.f-blanco{
 .marginLeft1{
     margin-left:1vh;
 }
+.marginLeft8{
+    margin-left:8vw;
+}
+.paddingTop20{
+    padding-top: 20vh;
+}
 .bordeSimple{
     border:1px solid #000;
+}
+.textAlignLeft{
+    text-align: left;
+}
+.textAlignCenter{
+    text-align: center;
 }
 
 /*=============*/
@@ -571,4 +593,47 @@ header {
     background-color: rgba(0,0,0,0.6);
     min-width: 6vw;
     min-height: 8vh
+}
+
+.item {
+    margin: 3vh 0vh;
+    min-height: 10vh;
+    background-color: white;
+}
+
+.item-list {
+    background-color: white;
+    padding-top: 5vh;
+}
+
+.cartThumbnailImg{
+    background-color:red;
+    width:60%;
+    min-width: 64px;
+}
+
+.minWidth64{
+    min-width: 64px;
+}
+
+.datosCompra{
+    padding:15vh 4vw;
+    background-color:white;
+}
+
+@media all and (max-width: 940px){
+    .menu-navegacion a, #menu-navegacion{
+        font-size: calc(0.6em + 0.6vw);
+        transition: none;
+    }
+
+    #cart h3{
+        font-size: 1.3rem;
+    }
+    #cart h4{
+        font-size: 1rem;
+    }
+    #cart p, #cart button, #cart form{
+        font-size: 0.8rem;
+    }
 }

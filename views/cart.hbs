@@ -1,43 +1,31 @@
-<div class="row" style="background-color:darkgray;padding-top:20vh;">
-    <style>
-        .item {
-            margin: 3vh 0vh;
-            min-height: 10vh;
-            background-color: white;
-        }
-
-        .item-list {
-            background-color: white;
-            padding-top: 5vh;
-        }
-    </style>
+<div class="row bg-darkgray paddingTop20" id="cart">
     <div class="col-8 full-page item-list">
         <div class="row">
             <div class="col-12">
-                <h3 style="margin-left:8vw"><b>Cesta</b></h3>
+                <h3 class="marginLeft8"><b>Cesta</b></h3>
                 <hr />
             </div>
         </div>
-        <div class="row">
-            <div class="col-3">
-                <p style="text-align:center"><b>Imagen</b></p>
+        <div class="row flex-nowrap">
+            <div class="col-3 minWidth64">
+                <p class="textAlignCenter"><b>Imagen</b></p>
                 <hr />
             </div>
             <div class="col-6">
-                <p style="text-align:left"><b>Descripcion</b></p>
+                <p class="textAlignLeft"><b>Descripcion</b></p>
                 <hr />
             </div>
             <div class="col-3">
-                <p style="text-align:left"><b>Precio</b></p>
+                <p class="textAlignLeft"><b>Precio</b></p>
                 <hr />
             </div>
         </div>
         {{#if viajes.length}}
         {{#each viajes}}
         <div class="row item">
-            <div class="col-3 d-flex justify-content-center" style="">
-                <div style="background-color:red;width:60%;border:1px solid #000">
-                    <img src="img/{{ruta}}" style="width:100%" class="img-responsive" />
+            <div class="col-3 d-flex justify-content-center">
+                <div class="cartThumbnailImg">
+                    <img src="img/{{ruta}}" class="img-responsive w-100 bordeSimple" />
                 </div>
             </div>
             <div class="col-6">
@@ -57,23 +45,20 @@
                 </div>
             </div>
             <div class="col-3">
-                <h3 style="color:red">{{precio}}EUR</h3>
+                <h3 class="f-red">{{precio}}EUR</h3>
             </div>
         </div>
         {{/each}}
         {{/if}}
     </div>
     <style>
-        .datosCompra{
-           padding:15vh 4vw;
-           background-color:white;
-        }
+
     </style>
-    <div class="col-4  datosCompra">
+    <div class="col-4 datosCompra">
         <div class="row">
                 <div class="col-12"><h3><b>Subtotal:</b></h3></div>
-                <div class="col-12"><h4 style="color:red">EUR {{precio}}</h4></div>
-                <div class="col-12"><p style="color:dimgrey">*Se aplicara el 19%</p></div>
+                <div class="col-12"><h4 class="f-red">EUR {{precio}}</h4></div>
+                <div class="col-12"><p class="f-dimgray">*Se aplicara el 19%</p></div>
                 <div class="col-12"><button class="btn btn-warning">Tramitar Pedido</button></div>
             
         </div> 
